@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef } from "react";
+import axiosConfig from "./axiosConfig";
 import { Player } from "video-react";
 import ReactPlayer from "react-player";
 import { useHistory } from "react-router-dom";
@@ -23,8 +24,10 @@ import SocialCarousel from "./SocialCarousel";
 import Example1 from "./Example1";
 import Example2 from "./Example2";
 import Example3 from "./Example3";
-import optionBackground from "../images/option-background.jpg";
-import glassesMan from "../images/glasses-man.jpg";
+import optionBackground from "../images/option-background.png";
+import glassesMan from "../images/glasses-man.png";
+
+const axios = require("axios").default;
 
 function Home() {
     const history = useHistory();
@@ -37,6 +40,13 @@ function Home() {
     const example1 = useRef(null);
     const example2 = useRef(null);
     const example3 = useRef(null);
+
+    function test() {
+        axiosConfig.get("/test")
+            .then(res => {
+                console.log(res.data);
+            });
+    }
 
     function watchVideo(){
         setVideoPlayer(true);
@@ -77,7 +87,7 @@ function Home() {
                         <p className="hero-text">Students can practice in a wide variety of communication-focused simulations that include job interviews, self-introductions, presentations, and more. </p>
                         <p className="hero-text no-margin-bottom">InStage can be accessed remotely from any computer so students can learn and develop from anywhere.</p>
                     </div>
-                    <button className="try-it-btn">Try it</button>
+                    <button className="try-it-btn" onClick={test}>Try it</button>
                 </div>
                 <div className="hero-section-2">
                     <div className="hero-section-2-fixed">
