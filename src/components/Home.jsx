@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef } from "react";
-import { Player } from 'video-react';
+import { Player } from "video-react";
+import ReactPlayer from "react-player";
 import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
 import preview from "../images/preview.gif";
@@ -86,9 +87,7 @@ function Home() {
                             </video>
                         )}
                         {videoPlayer === true && (
-                            <Player className="video" autoPlay>
-                                <source src={video}/>
-                            </Player>
+                            <ReactPlayer className="video" url="https://vimeo.com/508210873/750aa8a2cd" playing="true" controls="true" />
                         )}
                     </div>
                     <Button className="video-btn" onClick={watchVideo}>Watch Overview Video</Button>
