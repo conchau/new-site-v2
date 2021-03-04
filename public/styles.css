@@ -1073,11 +1073,16 @@ nav {
   .option-section {
     padding: 100px 0 0;
     bottom: 450px;
+    margin-bottom: -425px;
   }
 
   .option-section-topper {
     height: 450px;
     bottom: 850px;
+  }
+
+  .pricing-section {
+    margin-top: 0;
   }
 }
 
@@ -1113,6 +1118,10 @@ nav {
     margin: 25px 28%;
     height: auto;
     width: 44% !important;
+  }
+
+  .cta-detail-container {
+    right: 5%;
   }
 }
 
@@ -1526,6 +1535,7 @@ nav {
   .option-section {
     padding: 100px 0 0;
     bottom: 300px;
+    margin-bottom: -325px;
   }
 
   .option-section-topper {
@@ -1594,6 +1604,7 @@ nav {
   .pricing-section {
     min-height: 700px;
     border-bottom: 1px solid #414042;
+    margin-top: 150px;
   }
 
   .pricing-title {
