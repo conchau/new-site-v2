@@ -4,10 +4,17 @@ import { Player } from "video-react";
 import ReactPlayer from "react-player";
 import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
+import Carousel, { Dots } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 import preview from "../images/preview.gif";
 import videoPreview from "../images/video-mini.mp4";
 import video from "../images/video-large.mp4";
 import Button from 'react-bootstrap/Button'
+import divider1 from "../images/divider1.png";
+import divider2 from "../images/divider2.png";
+import divider3 from "../images/divider3.png";
+import divider4 from "../images/divider4.png";
+import demoBackground from "../images/demo-background.png";
 import Seneca from "../images/Seneca.png";
 import Humber from "../images/Humber.png";
 import Fanshawe from "../images/Fanshawe.png";
@@ -19,20 +26,26 @@ import check from "../images/check.png";
 import calendar from "../images/calendar.png";
 import chart from "../images/chart.png";
 import user from "../images/user.png";
-import rightArrow from "../images/right-arrow.png";
 import SocialCarousel from "./SocialCarousel";
 import Example1 from "./Example1";
 import Example2 from "./Example2";
 import Example3 from "./Example3";
 import optionBackground from "../images/option-background.png";
 import glassesMan from "../images/glasses-man.png";
+import SimCard from "./SimCard";
+import leftArrow from "../images/leftArrow.png";
+import leftArrow2 from "../images/left-arrow.png";
+import rightArrow from "../images/rightArrow.png";
+import rightArrow2 from "../images/right-arrow.png";
+import screenshot from "../images/simscreenshot.png";
+import data from "../images/data.png";
+import girlOnLaptop from "../images/girl-on-laptop.png";
 
 const axios = require("axios").default;
 
 function Home() {
     const history = useHistory();
 
-    const [videoPlayer, setVideoPlayer] = useState(false);
     const [explainerTitle, setExplainerTitle] = useState("To help students stand out to employers...")
     const [exampleCard, setExampleCard] = useState("example-1");
 
@@ -46,10 +59,6 @@ function Home() {
             .then(res => {
                 console.log(res.data);
             });
-    }
-
-    function watchVideo(){
-        setVideoPlayer(true);
     }
 
     function switchExample(option){
@@ -80,211 +89,283 @@ function Home() {
             <div className="hero-section">
                 <div className="hero-section-1">
                     <div className="hero-section-1-fixed">
-                        <div className="hero-title-box">
-                            <h1 className="hero-title">Remote practice for real performance</h1>
-                        </div>
-                        <p className="hero-text">InStage deploys immersive learning technology that increases job readiness.</p>
-                        <p className="hero-text">Students can practice in a wide variety of communication-focused simulations that include job interviews, self-introductions, presentations, and more. </p>
-                        <p className="hero-text no-margin-bottom">InStage can be accessed remotely from any computer so students can learn and develop from anywhere.</p>
+                        <h1 className="hero-title">Simulations for soft skills</h1>
+                        <h2 className="hero-subtitle">Add simulations to Zoom</h2>
+                        <p className="hero-text">Through realistic practice sessions, student's can learn how to introduce themselves, deliver presentations, communicate effectively, and sharpen their interview skills in an immersive training environment. </p>
                     </div>
-                    <button className="try-it-btn" onClick={test}>Try it</button>
+                    <button className="cta-btn-1">Schedule Private Demo</button>
                 </div>
                 <div className="hero-section-2">
                     <div className="hero-section-2-fixed">
-                        {videoPlayer === false && (
-                            <video className="video-preview" autoPlay loop muted>
-                                <source src={videoPreview} type="video/mp4" />
-                            </video>
-                        )}
-                        {videoPlayer === true && (
-                            <ReactPlayer className="video" url="https://vimeo.com/508210873/750aa8a2cd" playing="true" controls="true" />
-                        )}
+                            <ReactPlayer className="video-1" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" />
                     </div>
-                    <Button className="video-btn" onClick={watchVideo}>Watch Overview Video</Button>
+                    <div className="social-proof-1">
+                        <div className="logo-container">
+                            <img className="proof-logo" src={Seneca} alt="Seneca-logo"/>
+                        </div>
+                        <div className="logo-container">
+                            <img className="proof-logo" src={Fanshawe} alt="Fanshawe-logo"/>
+                        </div>
+                        <div className="logo-container">
+                            <img className="proof-logo" src={Humber} alt="Humber-logo"/>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            {/* SOCIAL PROOF 1 */}
-            <div className="social-proof-1">
-                <div className="logo-container">
-                    <img className="proof-logo" src={Seneca} alt="Seneca-logo"/>
+            {/* DIVIDER SECTION */}
+            <div className="divider-section">
+                <img className="divider-curve-1" src={divider1} />
+                <img className="divider-curve-2" src={divider2} />
+                <div className="social-proof-divider">
+                    <h1 className="divider-section-title">"Students need to sell themselves to the world.</h1>
+                    <h1 className="divider-section-title">And they could use a place to practice."</h1>
                 </div>
-                <div className="logo-container">
-                    <img className="proof-logo" src={Humber} alt="Humber-logo"/>
+            </div>
+
+            {/* DEMO SECTION */}
+            <div className="demo-section">
+                <div className="demo-section-1">
+                    <ReactPlayer className="video-2" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" />
                 </div>
-                <div className="logo-container optional">
-                    <img className="proof-logo" src={Fanshawe} alt="Fanshawe-logo"/>
+                <div className="demo-section-2">
+                    <h1 className="demo-title">Watch the demo</h1>
+                    <h2 className="demo-text">Co-founder, Imran Mouna shows you the InStage experience</h2>
                 </div>
-                <div className="logo-container optional">
-                    <img className="proof-logo" src={HTS} alt="HTS-logo"/>
-                </div>
+            </div>
+            <img className="demo-background" src={demoBackground} />
+
+            {/* SIM SECTION */}
+            <div className="sim-section">
+                <h1 className="sim-title">The soft-skills employers want to see</h1>
+                <h2 className="sim-subtitle">Access a growing library of simulations...</h2>
+                <Carousel
+                    arrows
+                    itemWidth={300}
+                    infinite
+                    className="carousel"
+                >
+                    <SimCard
+                        title="Self-Introduction"
+                        description="Learn the 4 steps of a self-introduction and practice introducing yourself to an employer!"
+                    />
+                    <SimCard
+                        title="Interview Practice"
+                        description="Complete a Panel Interview. Learn and practice using the STAR model."
+                    />
+                    <SimCard
+                        title="Handling Objections"
+                        description="Learn and practice a 4 step model to handling objections."
+                    />
+                    <SimCard
+                        title="Handling Objections"
+                        description="Learn and practice a 4 step model to handling objections."
+                    />
+                </Carousel>
             </div>
 
             {/* FEATURE SECTION */}
             <div className="feature-section">
-                <div className="feature-section-1">
-                    <h1 className="feature-title">Online learning is here to stay.</h1>
-                    <h1 className="feature-title">InStage is here to make it <p className="pink-text">immersive.</p></h1>
-                    <div className="feature-box">
-                        <img className="feature-icon" src={like} alt="like-icon" />
-                        <div className="feature-text-box">
-                            <p className="feature-text">Engaging</p>
-                            <p className="feature-subtext">Practice sessions usually last around 25 minutes.</p>
+                <h1 className="feature-title">Online learning is here to stay.</h1>
+                <h1 className="feature-title">InStage is here to make it <p className="emphasis">immersive.</p></h1>
+                <div className="feature-section-1" data-aos="fade-right">
+                    <div className="feature-section-1a">
+                        <h1 className="feature-number">1</h1>
+                        <h1 className="feature-subtitle">Solo Practice. Delivered through Zoom.</h1>
+                        <div className="feature-section-text-box">
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">No accounts or downloads required.</p>
+                        </div>
+                        <div className="feature-section-text-box">
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Student's self-schedule a ~25 minute InStage Session over Zoom.</p>
                         </div>
                     </div>
-                    <div className="feature-box">
-                        <img className="feature-icon" src={padlock} alt="padlock-icon" />
-                        <div className="feature-text-box">
-                            <p className="feature-text">Private</p>
-                            <p className="feature-subtext">Students control sharing of data report and recording.</p>
-                        </div>
+                    <div className="feature-section-1b">
+                        <video className="feature-visual" autoPlay loop muted>
+                            <source src={videoPreview} type="video/mp4" />
+                        </video>
                     </div>
-                    <div className="feature-box">
-                        <img className="feature-icon" src={check} alt="check-icon" />
-                        <div className="feature-text-box">
-                            <p className="feature-text">Easy</p>
-                            <p className="feature-subtext">Simply join a Zoom meeting and start practicing.</p>
+                </div>
+                <div className="feature-section-2" data-aos="fade-left">
+                    <div className="feature-section-2a">
+                        <img src={screenshot} className="feature-visual" />
+                    </div>
+                    <div className="feature-section-2b">
+                        <h1 className="feature-number">2</h1>
+                        <h1 className="feature-subtitle">Immersive Practice</h1>
+                        <div className="feature-section-text-box">
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Provide students with an opportunity to engage in realistic practice in a safe, virtual environment.</p>
+                        </div>
+                        <div className="feature-section-text-box">
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Something about why experiential / immersive learning is superior (data points)</p>
                         </div>
                     </div>
                 </div>
-                <div className="feature-section-2">
-                    <img className="educator-img" src={Educator} alt="educator-image" />
+                <div className="feature-section-3" data-aos="fade-right">
+                    <div className="feature-section-3a">
+                        <h1 className="feature-number">3</h1>
+                        <h1 className="feature-subtitle">Driven by Data</h1>
+                        <div className="feature-section-text-box">
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Review instant feedback and develop skills through practice.</p>
+                        </div>
+                        <div className="feature-section-text-box">
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Learn from objective feedback on metrics such as speaking pace, clarity, filler words, and more.</p>
+                        </div>
+                    </div>
+                    <div className="feature-section-3b">
+                        <img src={data} className="feature-visual" alt="data-report-screenshot" />
+                    </div>
+                </div>
+                <div className="feature-section-4" data-aos="fade-left">
+                    <div className="feature-section-4a">
+                        <img src={screenshot} className="feature-visual" />
+                    </div>
+                    <div className="feature-section-4b">
+                        <h1 className="feature-number">4</h1>
+                        <h1 className="feature-subtitle">Collaborative</h1>
+                        <div className="feature-section-text-box">
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Instructors can be invited to join InStage sessions to provide live feedback and evaluation.</p>
+                        </div>
+                        <div className="feature-section-text-box">
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Group Presentations. Multiple students can join a single session to practice and learn together.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="feature-section-5" data-aos="fade-right">
+                    <div className="feature-section-5a">
+                        <h1 className="feature-number">5</h1>
+                        <h1 className="feature-subtitle">Safe and Private</h1>
+                        <div className="feature-section-text-box">
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Stay protected through the reliable security of Zoom's software.</p>
+                        </div>
+                        <div className="feature-section-text-box">
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Students control the sharing of their data report and the optionial video recording.</p>
+                        </div>
+                    </div>
+                    <div className="feature-section-5b">
+                        <img src={girlOnLaptop} className="feature-visual" alt="girl-on-laptop" />
+                    </div>
                 </div>
             </div>
 
-            {/* HOW TO SECTION */}
-            <div className="how-to-section">
-                <h1 className="how-to-title">InStage practice sessions are <p className="pink-text">easy</p> for students to do.</h1>
-                <div className="how-to-process">
-                    <div className="how-to-step">
-                        <div className="how-to-num">1</div>
-                        <h2 className="how-to-step-title"><p className="green-text">Book</p> a session</h2>
-                        <p className="how-to-step-text">Simple booking via online calendar.</p>
-                        <p className="how-to-step-text">No account required.</p>
-                        <img className="how-to-img" src={calendar} alt="calendar-icon" />
-                    </div>
-                    <img className="arrow-icon" src={rightArrow} alt="right-arrow-icon" />
-                    <div className="how-to-step">
-                        <div className="how-to-num">2</div>
-                        <h2 className="how-to-step-title"><p className="green-text">Join</p> & practice</h2>
-                        <p className="how-to-step-text">Accessible via Zoom link.</p>
-                        <p className="how-to-step-text">No downloads required.</p>
-                        <img className="how-to-img" src={user} alt="user-icon" />
-                    </div>
-                    <img className="arrow-icon" src={rightArrow} alt="right-arrow-icon" />
-                    <div className="how-to-step">
-                        <div className="how-to-num">3</div>
-                        <h2 className="how-to-step-title"><p className="green-text">Review</p> results</h2>
-                        <p className="how-to-step-text">Session data provided instantly.</p>
-                        <p className="how-to-step-text">User-controlled privacy.</p>
-                        <img className="how-to-img" src={chart} alt="chart-icon" />
-                    </div>
+            {/* DIVIDER2 SECTION */}
+            <div className="divider2-section">
+                <img className="divider2-curve-1" src={divider3} />
+                <img className="divider2-curve-2" src={divider4} />
+                <div className="social-proof-divider2">
+                    <h1 className="divider2-section-title">Ready to get started?</h1>
+                    <button className="cta-btn-2">Schedule a Demo</button>
                 </div>
-                <button className="try-it-btn-2">Try it</button>
+                <div className="option-section-topper"></div>
             </div>
-
-            {/* SOCIAL PROOF 2 */}
-            <SocialCarousel />
 
             {/* OPTION SECTION */}
             <div className="option-section">
-                <h1 className="option-title">Students need to sell themselves to the world.</h1>
-                <h1 className="option-title">And they could use a place to <p className="pink-text">practice</p>.</h1>
+                <h1 className="option-title">International Students benefit most by using InStage.</h1>
                 <div className="example-btn-container">
                     <button
                         className="active-example"
                         ref={example1}
                         onClick={() => switchExample("example-1")}
-                        >Getting a Job
+                        >Recruiting
                     </button>
+                    <div className="example-arrow-container">
+                        {exampleCard === "example-1" && (
+                        <img src={rightArrow2} className="example-arrow" data-aos="zoom-in-right" alt="right-arrow" />
+                        )}
+                    </div>
                     <button
                         className="example-btn"
                         ref={example2}
                         onClick={() => switchExample("example-2")}
-                        >Workplace Skills
+                        >Retaining
                     </button>
+                    <div className="example-arrow-container">
+                        {exampleCard === "example-2" && (
+                        <img src={rightArrow2} className="example-arrow" data-aos="zoom-in-right" alt="right-arrow" />
+                        )}
+                        {exampleCard === "example-3" && (
+                        <img src={leftArrow2} className="example-arrow" data-aos="zoom-in-left" alt="left-arrow" />
+                        )}
+                    </div>
                     <button
                         className="example-btn"
                         ref={example3}
                         onClick={() => switchExample("example-3")}
-                        >Language Practice
+                        >Transitioning
                     </button>
                 </div>
                 <div className="example-container">
-                    <div className="explainer-container">
-                        <img className="option-background" src={optionBackground} alt="option-background-img" />
-                    </div>
-                    <div className="example-card">
-                        {exampleCard === "example-1" &&(
-                            <Example1
-                                explainer={explainerTitle}
-                            />
-                        )}
-                        {exampleCard === "example-2" &&(
-                            <Example2
-                                explainer={explainerTitle}
-                            />
-                        )}
-                        {exampleCard === "example-3" &&(
-                            <Example3
-                                explainer={explainerTitle}
-                            />
-                        )}
-                    </div>
+                        <div className="example-card">
+                            {exampleCard === "example-1" && (
+                                <div className="example-1" data-aos="fade-right">
+                                    <p className="example-text">Use InStage to efficiently conduct screening interviews.</p>
+                                    <p className="example-text">Showcase immersive learning capacity to candidates.</p>
+                                </div>
+                            )}
+                            {exampleCard === "example-2" &&(
+                                <div className="example-2" data-aos="fade-right">
+                                    <p className="example-text">Increase online learning engagement.</p>
+                                    <p className="example-text">InStage users report 94% more confidence.</p>
+                                </div>
+                            )}
+                            {exampleCard === "example-3" &&(
+                                <div className="example-3" data-aos="fade-right">
+                                    <p className="example-text">Employers say that they want students with better soft-skills.</p>
+                                    <p className="example-text">Learn interviewing norms and increase.</p>
+                                </div>
+                            )}
+                        </div>
                 </div>
+                <h1 className="option-subtitle">Student Testimonials</h1>
+                <ReactPlayer className="video-3" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" />
             </div>
 
             {/* PRICING SECTION */}
             <div className="pricing-section">
-                <h1 className="pricing-title">Remotely <p className="pink-text">engage</p> your students with InStage Practice Sessions</h1>
-                <h2 className="pricing-subtitle">InStage is only available through educational institutions and enterprises.</h2>
+                <h1 className="pricing-title">Remotely engage your students with InStage Practice Sessions</h1>
+                <h2 className="pricing-subtitle">InStage is only available through educational institutions and businesses.</h2>
                 <div className="pricing-breakdown">
                     <div className="pricing-unlimited bounce">
                         <h2 className="pricing-card-title">Unlimited Practice Sessions</h2>
                         <p className="pricing-card-text">Students can book an unlimited number of practice sessions during the semester.</p>
                         <button className="pricing-card-btn">Learn More</button>
-                        <p className="pricing-card-note">*Volume discounts</p>
                     </div>
                     <div className="pricing-single bounce">
                         <h2 className="pricing-card-title">Single Practice Sessions</h2>
                         <p className="pricing-card-text">Students receive a session link that allows them to book a single practice session.</p>
                         <button className="pricing-card-btn">Learn More</button>
-                        <p className="pricing-card-note">*Volume discounts</p>
                     </div>
                     <div className="pricing-detail-section">
-                        <p className="pricing-detail-text">No downloads or accounts are required to get started</p>
-                        <p className="pricing-detail-text">Instantly deploy remote-simulations to your students</p>
-                        <p className="pricing-detail-text">Immersive learning with data-driven feedback</p>
+                        <div className="pricing-section-text-box">
+                            <img src={rightArrow} className="right-arrow-pricing"/><p className="pricing-detail-text">No downloads or accounts are required to get started</p>
+                        </div>
+                        <div className="pricing-section-text-box">
+                            <img src={rightArrow} className="right-arrow-pricing"/><p className="pricing-detail-text">Instantly deploy remote-simulations to your students</p>
+                        </div>
+                        <div className="pricing-section-text-box">
+                            <img src={rightArrow} className="right-arrow-pricing"/><p className="pricing-detail-text">Immersive learning with data-driven feedback</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* SOCIAL PROOF 2 */}
-            <SocialCarousel />
-
-            {/* ONBOARDING SECTION */}
-            <div className="onboarding-section">
-                <h1 className="onboarding-title">Onboarding Roadmap</h1>
-                <div className="onboarding-process">
-                    <div className="onboarding-step">
-                        <div className="onboarding-num">1</div>
-                        <h2 className="onboarding-step-title">Demo</h2>
-                        <p className="onboarding-step-text">It’s free and easy to try InStage. Jump into a simulation in minutes.</p>
-                    </div>
-                    <img className="onboarding-arrow-icon" src={rightArrow} alt="right-arrow-icon" />
-                    <div className="onboarding-step">
-                        <div className="onboarding-num">2</div>
-                        <h2 className="onboarding-step-title">Pilot</h2>
-                        <p className="onboarding-step-text">Easy. Short. Inexpensive. We’ll get you setup to deploy to a small group of students in hours, not months.</p>
-                    </div>
-                    <img className="onboarding-arrow-icon" src={rightArrow} alt="right-arrow-icon" />
-                    <div className="onboarding-step">
-                        <div className="onboarding-num">3</div>
-                        <h2 className="onboarding-step-title">Full Access</h2>
-                        <p className="onboarding-step-text">Continue to use InStage on a per session basis, or upgrade to unlimited access.</p>
+            {/* SOCIAL DIVIDER SECTION */}
+            <div className="social-divider-section">
+                <div className="social-divider-container">
+                    <div className="social-profile-pic"></div>
+                    <div className="social-divider-text-container">
+                        <p className="social-divider-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat.
+                        </p>
+                        <div className="social-divider-names">
+                            <p className="social-divider-person">Dave School Director</p>
+                            <img src={Fanshawe} className="social-divider-logo" alt="fanshawe-logo" />
+                        </div>
                     </div>
                 </div>
-                <button className="cta-btn-3">Learn More</button>
+            </div>
+            <div className="social-divider-bottom">
+
             </div>
 
             {/* CTA SECTION */}
@@ -292,16 +373,20 @@ function Home() {
                 <img className="cta-background" src={glassesMan} alt="man-with-glasses" />
                 <div className="cta-detail-container">
                     <h1 className="cta-title">Want to learn more?</h1>
-                    <h2 className="cta-text">We host short live streams</h2>
-                    <h2 className="cta-text"><strong>every Wednesday at 11am ET</strong></h2>
-                    <h2 className="cta-text">to provide a quick way to see</h2>
-                    <h2 className="cta-text">InStage in action.</h2>
+                    <h2 className="cta-text1">If you’re ready to learn more about InStage, click the link below and try your very own simulated demo. From there, you can decide if InStage is right for you.</h2>
                     <a href="https://instage.zoom.us/webinar/register/WN_8zi2fFH2S62f-jVLFWZ9hw">
-                        <button className="cta-btn-4">Watch a live demo</button>
+                        <button className="cta-btn-3">Schedule demo</button>
                     </a>
-                    <a href="https://instage.zoom.us/webinar/register/WN_0w47HFJnRHuhk6KXCO38sw">
-                        <button className="cta-btn-5">Watch a live event</button>
-                    </a>
+
+                    <h2 className="cta-text2">We host short live streams every <strong>Wednesday at 11am ET</strong> to provide a quick way to see InStage in action.</h2>
+                    <div className="cta-btn-container">
+                        <a href="https://instage.zoom.us/webinar/register/WN_8zi2fFH2S62f-jVLFWZ9hw">
+                            <button className="cta-btn-4">Watch a live demo</button>
+                        </a>
+                        <a href="https://instage.zoom.us/webinar/register/WN_0w47HFJnRHuhk6KXCO38sw">
+                            <button className="cta-btn-5">Watch a live event</button>
+                        </a>
+                    </div>
                 </div>
             </div>
 

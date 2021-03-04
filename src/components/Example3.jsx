@@ -2,7 +2,7 @@ import React from "react";
 
 function Example3(props) {
     return (
-        <div className="example-3">
+        <div className="example-3" data-aos="flip-right">
             <h1 className="example-options-title">{props.explainer}</h1>
             <div className="example-sim">
                 <h2 className="example-sim-title">Freestyle Presentation (Session 119)</h2>
