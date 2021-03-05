@@ -1,0 +1,101 @@
+/* HERO SECTION */
+.heroSection {
+  display: flex;
+  height: 700px;
+  /* Note: for actual height, subtract header height (aka padding of this section) */
+  padding: 150px 0 0;
+}
+
+.heroSection1 {
+  width: 50%;
+  height: 600px;
+  margin: 0 0 0 15%;
+}
+
+.heroSection2 {
+  width: 50%;
+  height: 600px;
+  margin: 0 15% 0 0;
+}
+
+.heroSection1Fixed {
+  height: 375px;
+  margin: 50px 0 0;
+}
+
+.heroSection2Fixed {
+  height: 375px;
+  margin: 50px 0 0;
+  position: relative;
+}
+
+.heroTitle {
+  width: 80%;
+  margin: 0;
+  text-align: left;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.heroSubtitle {
+  width: 80%;
+  margin: 25px 0 50px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.heroText {
+  margin: 50px auto 0 0;
+  width: 80%;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.noMarginBottom {
+  margin-bottom: -20px;
+}
+
+.ctaBtn1 {
+  background-color: #00a9af !important;
+  color: white;
+  border: 1px solid #00a9af;
+  border-radius: 0.25rem;
+  height: 50px;
+  width: 300px;
+  margin: 0 auto 0 0;
+  display: block !important;
+  font-size: 20px !important;
+  box-shadow: -1px 1px 5px grey;
+}
+
+.ctaBtn1:hover {
+  opacity: 80%;
+  transform: scale(1.01);
+  transition: 200ms linear;
+}
+
+.video1 {
+  margin: 0 5%;
+  height: auto;
+  width: 90% !important;
+  border-radius: 5px;
+  border: none;
+  /* position: absolute; */
+  box-shadow: -1px 1px 5px grey;
+}
+
+.socialProof1 {
+  width: 100%;
+  height: 125px;
+  margin: 0 15% 0 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.proofLogo {
+  width: 100px;
+  height: auto;
+  margin: 12px 0 0;
+  display: block;
+}

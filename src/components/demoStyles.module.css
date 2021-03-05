@@ -1,0 +1,110 @@
+.demoPage {
+  display: flex;
+  height: 1200px;
+  /* Note: for actual height, subtract header height (aka padding of this section) */
+  padding: 100px 15% 0;
+}
+
+.section1 {
+  margin: 50px auto 0;
+  width: 50%;
+  padding: 0 5% 0 0;
+}
+
+.section2 {
+  margin: 50px auto 0;
+  width: 50%;
+}
+
+.demoTitle {
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0 0 10px;
+}
+
+.demoSubtitle {
+  font-weight: 500;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.demoText {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0 0 50px;
+}
+
+.featureContainer {
+  display: flex;
+  margin: 25px 0;
+}
+
+.featureContainerText {
+  margin: 0 0 0 10px;
+  font-size: 30px;
+}
+
+.socialProofContainer {
+  height: 125px;
+  padding: 3% 0;
+  border-radius: 5px;
+  background-color: rgb(234, 234, 234);
+  box-shadow: -1px 1px 5px grey;
+}
+
+.socialProofText {
+  font-size: 25px;
+  font-weight: 900;
+  color: rgb(95, 95, 95);
+  padding: 0 0 0 5%;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 5%;
+}
+
+.logo {
+  width: 25%;
+  margin: 10px 0;
+}
+
+/* /
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/ */
+
+@media screen and (max-width: 1400px) {
+  .demoPage {
+    display: block;
+    height: 2200px;
+  }
+
+  .section1 {
+    width: 100%;
+    margin-bottom: 150px;
+  }
+
+  .section2 {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .socialProofContainer {
+    height: 150px;
+  }
+}

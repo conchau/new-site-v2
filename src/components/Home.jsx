@@ -93,7 +93,7 @@ function Home() {
                         <h2 className="hero-subtitle">Add simulations to Zoom</h2>
                         <p className="hero-text">Through realistic practice sessions, student's can learn how to introduce themselves, deliver presentations, communicate effectively, and sharpen their interview skills in an immersive training environment. </p>
                     </div>
-                    <button className="cta-btn-1">Schedule Private Demo</button>
+                    <a href="/demo" style={{textDecoration: "none"}}><button className="cta-btn-1" href="/demo">Schedule Private Demo</button></a>
                 </div>
                 <div className="hero-section-2">
                     <div className="hero-section-2-fixed">
@@ -253,7 +253,7 @@ function Home() {
                 <img className="divider2-curve-2" src={divider4} />
                 <div className="social-proof-divider2">
                     <h1 className="divider2-section-title">Ready to get started?</h1>
-                    <button className="cta-btn-2">Schedule a Demo</button>
+                    <a href="/demo" style={{textDecoration: "none"}}><button className="cta-btn-2">Schedule a Demo</button></a>
                 </div>
                 <div className="option-section-topper"></div>
             </div>
@@ -328,12 +328,12 @@ function Home() {
                     <div className="pricing-unlimited bounce">
                         <h2 className="pricing-card-title">Unlimited Practice Sessions</h2>
                         <p className="pricing-card-text">Students can book an unlimited number of practice sessions during the semester.</p>
-                        <button className="pricing-card-btn">Learn More</button>
+                        <a href="/pricing" style={{textDecoration: "none"}}><button className="pricing-card-btn">Learn More</button></a>
                     </div>
                     <div className="pricing-single bounce">
                         <h2 className="pricing-card-title">Single Practice Sessions</h2>
                         <p className="pricing-card-text">Students receive a session link that allows them to book a single practice session.</p>
-                        <button className="pricing-card-btn">Learn More</button>
+                        <a href="/pricing" style={{textDecoration: "none"}}><button className="pricing-card-btn">Learn More</button></a>
                     </div>
                     <div className="pricing-detail-section">
                         <div className="pricing-section-text-box">
@@ -374,7 +374,7 @@ function Home() {
                 <div className="cta-detail-container">
                     <h1 className="cta-title">Want to learn more?</h1>
                     <h2 className="cta-text1">If you’re ready to learn more about InStage, click the link below and try your very own simulated demo. From there, you can decide if InStage is right for you.</h2>
-                    <a href="https://instage.zoom.us/webinar/register/WN_8zi2fFH2S62f-jVLFWZ9hw">
+                    <a href="/demo" style={{textDecoration: "none"}}>
                         <button className="cta-btn-3">Schedule demo</button>
                     </a>
 

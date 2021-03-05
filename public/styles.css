@@ -1,3 +1,25 @@
+/* FOR TRANSITIONS */
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -63,7 +85,7 @@ nav {
 
 .navbar-nav {
   min-width: 700px !important;
-  margin: 0 25% 0 0 !important;
+  margin: 0 5% 0 0 !important;
 }
 
 .color-navbar {
@@ -72,7 +94,7 @@ nav {
 }
 
 .logo {
-  margin: 0 20% 0 0 !important;
+  margin: 0 15% 0 0 !important;
 }
 
 .nav-link {
@@ -85,6 +107,7 @@ nav {
   text-align-last: center;
   display: flex;
   opacity: 80%;
+  margin: 0 10px;
 }
 
 .nav-link:hover {
@@ -97,6 +120,11 @@ nav {
   opacity: 1;
   border-bottom: 4px solid #303d7c;
 }
+
+/* .nav-link.active.cta-btn-header {
+  opacity: 1;
+  border-bottom: none;
+} */
 
 /* .nav-link::before {
   transition: 300ms;
@@ -116,6 +144,7 @@ nav {
   background-color: #00a9af !important;
   color: white !important;
   border: 1px solid #00a9af;
+  border-bottom: none !important;
   border-radius: 0.25rem;
   height: 40px;
   width: 200px !important;
@@ -169,7 +198,7 @@ nav {
   display: flex;
   height: 700px;
   /* Note: for actual height, subtract header height (aka padding of this section) */
-  padding: 100px 0 0;
+  padding: 150px 0 0;
 }
 
 .hero-section-1 {
@@ -990,9 +1019,9 @@ nav {
 }
 
 .cta-btn-5 {
-  background-color: #031d44;
+  background-color: #303d7c;
   color: white;
-  border: 1px solid #031d44;
+  border: 1px solid #303d7c;
   border-radius: 0.25rem;
   height: 50px;
   width: 200px;
@@ -1242,8 +1271,8 @@ nav {
     min-height: 75px;
   }
 
-  .logo {
-    margin: 0 5% 0 5%;
+  a img {
+    margin: 0 5% 0 5% !important;
     height: 50px;
   }
 
@@ -1271,7 +1300,7 @@ nav {
     height: 600px;
     width: 100%;
     margin: 0 auto;
-    padding: 50px 5% 0;
+    padding: 100px 5% 0;
   }
 
   .hero-section-2 {
@@ -1286,7 +1315,7 @@ nav {
   }
 
   .hero-section-2-fixed {
-    height: 400px;
+    height: 350px;
     width: 100%;
     padding: 0 15%;
   }
@@ -1318,7 +1347,7 @@ nav {
 
   .video-1 {
     width: 100%;
-    height: 200px !important;
+    height: 300px !important;
     padding: 0;
   }
 
@@ -1359,7 +1388,7 @@ nav {
 
   .video-2 {
     width: 100%;
-    height: 200px !important;
+    height: 300px !important;
     padding: 0;
   }
 
@@ -2222,4 +2251,67 @@ nav {
   .social-proof-divider {
     bottom: 270px;
   }
+}
+
+/* /
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/ */
+
+/* PRICING PAGE */
+.active-option-left {
+  background-color: #00a9af;
+  border: none;
+  height: 50px;
+  color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.active-option-right {
+  background-color: #00a9af;
+  border: none;
+  height: 50px;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.inactive-option-right {
+  background-color: rgb(234, 234, 234);
+  border: none;
+  height: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.inactive-option-right:hover {
+  transform: scale(1.01);
+  color: #00a9af;
+}
+
+.inactive-option-left {
+  background-color: rgb(234, 234, 234);
+  border: none;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.inactive-option-left:hover {
+  transform: scale(1.01);
+  color: #00a9af;
 }

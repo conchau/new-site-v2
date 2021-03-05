@@ -44,7 +44,9 @@ function Header (){
                 </div>
             )}
             <Navbar collapseOnSelect expand="xl" className="color-navbar">
-                <img className="logo" src={logo} alt="instage-logo"/>
+                <a className="logo" to="/" href="/" eventKey="/">
+                    <img src={logo} alt="instage-logo"/>
+                </a>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav
@@ -53,11 +55,11 @@ function Header (){
                         onSelect={(selectedKey) => setActiveLink(selectedKey)}
                     >
                     <Nav.Link as={Link} to="/" href="/" eventKey="/">Higher Ed</Nav.Link>
-                    <Nav.Link as={Link} to="/k-12" href="/k-12" eventKey="/k-12" className="two">K-12</Nav.Link>
+                    <Nav.Link as={Link} to="/k12" href="/k12" eventKey="/k12" className="two">K-12</Nav.Link>
                     <Nav.Link as={Link} to="/corporate" href="/corporate" eventKey="/corporate" className="three">Corporate</Nav.Link>
                     <Nav.Link as={Link} to="/resources" href="/resources" eventKey="resources" className="four">Resources</Nav.Link>
                     <Nav.Link as={Link} to="/pricing" href="/pricing" eventKey="/pricing">Pricing</Nav.Link>
-                    <Nav.Link as={Link} to="/schedule-demo" href="/schedule-demo" eventKey="/schedule-demo" className="cta-btn-header">Schedule Private Demo</Nav.Link>
+                    <Nav.Link as={Link} to="/demo" href="/demo" eventKey="/demo" className="cta-btn-header">Schedule Private Demo</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 {/* <button className="cta-btn-header">Schedule Private Demo</button> */}
