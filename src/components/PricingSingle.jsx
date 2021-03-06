@@ -55,13 +55,19 @@ function PricingSingle() {
                         </div>
                         <div className={pricing.singleDetailContainer2}>
                             <div className={pricing.singleSectionTextBox}>
-                                <img src={rightArrow} className={pricing.rightArrowPricing}/><p className={pricing.singleDetailText}>No downloads or accounts required</p>
+                                <img src={rightArrow} className={pricing.rightArrowPricing}/><p className={pricing.singleDetailText}>A private booking URL to share with your students.</p>
                             </div>
                             <div className={pricing.singleSectionTextBox}>
-                                <img src={rightArrow} className={pricing.rightArrowPricing}/><p className={pricing.singleDetailText}>Instantly deploy remote-simulations to your students</p>
+                                <img src={rightArrow} className={pricing.rightArrowPricing}/><p className={pricing.singleDetailText}>Using the link, students select a convenient 30 minute time slot.</p>
                             </div>
                             <div className={pricing.singleSectionTextBox}>
-                                <img src={rightArrow} className={pricing.rightArrowPricing}/><p className={pricing.singleDetailText}>Immersive learning with data-driven feedback</p>
+                                <img src={rightArrow} className={pricing.rightArrowPricing}/><p className={pricing.singleDetailText}>Following the session, each student will receive a performance report.</p>
+                            </div>
+                            <div className={pricing.singleSectionTextBox}>
+                                <img src={rightArrow} className={pricing.rightArrowPricing}/><p className={pricing.singleDetailText}>Students can optionally record the session.</p>
+                            </div>
+                            <div className={pricing.singleSectionTextBox}>
+                                <img src={rightArrow} className={pricing.rightArrowPricing}/><p className={pricing.singleDetailText}>Administrator portal to review shared-session data</p>
                             </div>
                         </div>
                         <div className={pricing.singleContainer2}>
