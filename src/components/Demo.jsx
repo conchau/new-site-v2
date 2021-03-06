@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 import Seneca from "../images/Seneca.png";
 import Humber from "../images/Humber.png";
 import Fanshawe from "../images/Fanshawe.png";
-import HubspotForm from 'react-hubspot-form'
+import HubspotForm from "react-hubspot-form"
 
 
 function Demo() {

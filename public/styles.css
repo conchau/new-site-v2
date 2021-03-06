@@ -41,6 +41,33 @@ body {
   }
 }
 
+/* MENU STYLES */
+.sim-menu {
+}
+
+.sim-menu .btn {
+  height: 55px;
+  margin: 10px auto;
+  width: 100% !important;
+  border-color: #00a9af;
+  border-radius: 10px;
+  color: #00a9af;
+  font-size: 20px;
+  box-shadow: -1px 1px 5px grey;
+}
+
+.sim-menu .btn:hover {
+  border-color: #00a9af;
+  color: #00a9af;
+  opacity: 80%;
+  transform: scale(1.01);
+}
+
+.sim-menu .btn-primary {
+  border-color: #00a9af;
+  color: #00a9af !important;
+}
+
 /* HEADER STYLES */
 .contact-bar {
   display: flex;
@@ -94,7 +121,7 @@ nav {
 }
 
 .logo {
-  margin: 0 15% 0 0 !important;
+  margin: 0 8% 0 0 !important;
 }
 
 .nav-link {
@@ -103,7 +130,7 @@ nav {
   width: 100px !important;
   padding: none !important;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   text-align-last: center;
   display: flex;
   opacity: 80%;
@@ -416,26 +443,41 @@ nav {
   opacity: 80%;
 }
 
+.BrainhubCarousel__trackContainer {
+  height: 375px !important;
+}
+
+.BrainhubCarouselItem {
+  height: 375px !important;
+}
+
 .sim-card {
-  height: 300px;
+  height: 350px;
   width: 250px;
-  background-color: lightgray;
-  border: 1px solid lightgrey;
+  background-color: white;
+  border: 2px solid #303d7c;
   border-radius: 20px;
-  box-shadow: -1px -1px 5px grey;
+  box-shadow: -1px 1px 5px grey;
   text-align: left;
+  color: #303d7c;
+}
+
+.sim-card:hover {
+  opacity: 80%;
+  transform: scale(1.01);
+  /* transition: 200ms linear; */
 }
 
 .sim-card-img {
   height: auto;
-  width: 250px;
+  width: 246px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 .sim-card-title {
   font-size: 25px;
-  margin: 5px 0;
+  margin: 15px 0;
   padding: 0 8%;
 }
 
@@ -672,10 +714,11 @@ nav {
   font-weight: 700;
   font-size: 40px;
   color: white;
+  text-shadow: 1px 1px darkgray;
 }
 
 .example-btn-container {
-  height: 50px;
+  height: 250px;
   margin: 100px auto 50px;
   display: flex;
   justify-content: space-evenly;
@@ -692,35 +735,61 @@ nav {
 
 .example-btn:hover {
   opacity: 80%;
-  border-bottom: 3px solid white;
+  /* border-bottom: 3px solid white; */
 }
 
 .active-example {
   background-color: transparent;
   border: none;
-  border-bottom: 3px solid white;
+  /* border-bottom: 3px solid white; */
   font-size: 30px;
   color: white;
+  width: 30%;
+  text-shadow: 1px 1px darkgray;
 }
 
 .inactive-example {
   background-color: transparent;
   border: none;
   font-size: 30px;
-  color: #414042;
+  opacity: 60%;
+  width: 30%;
 }
 
 .inactive-example:hover {
   opacity: 80%;
-  border-bottom: 3px solid white;
+  transform: scale(1.01);
+  transition: 200ms linear;
+  /* border-bottom: 3px solid white; */
 }
 
 .example-arrow-container {
-  width: 50px;
+  width: 100px;
 }
 
 .example-arrow {
-  height: 50px;
+  height: 40px;
+  margin: 10px 25%;
+}
+
+.example-card {
+  display: flex;
+}
+
+.option-1 {
+  width: 30%;
+}
+
+.option-2 {
+  width: 30%;
+}
+
+.option-3 {
+  width: 30%;
+}
+
+.option-text-box {
+  width: 100%;
 }
 
 .example-1 {
@@ -753,6 +822,10 @@ nav {
   box-shadow: -1px 1px 5px grey;
 }
 
+.example-title {
+  font-size: 30px;
+}
+
 .example-text {
   width: 100%;
   margin: 10px 0 0;
@@ -767,6 +840,7 @@ nav {
   font-weight: 500;
   font-size: 30px;
   color: white;
+  text-shadow: 1px 1px darkgray;
 }
 
 .video-3 {
@@ -1137,6 +1211,15 @@ nav {
   .option-section-topper {
     height: 450px;
     bottom: 800px;
+  }
+
+  .example-arrow-container {
+    visibility: hidden;
+    width: 0;
+  }
+
+  .example-title {
+    font-size: 25px;
   }
 
   .example-text {

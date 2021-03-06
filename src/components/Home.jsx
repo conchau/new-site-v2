@@ -8,7 +8,7 @@ import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import preview from "../images/preview.gif";
 import videoPreview from "../images/video-mini.mp4";
-import video from "../images/video-large.mp4";
+import dataPreview from "../images/video-data.mp4";
 import Button from 'react-bootstrap/Button'
 import divider1 from "../images/divider1.png";
 import divider2 from "../images/divider2.png";
@@ -118,8 +118,8 @@ function Home() {
                 <img className="divider-curve-1" src={divider1} />
                 <img className="divider-curve-2" src={divider2} />
                 <div className="social-proof-divider">
-                    <h1 className="divider-section-title">"Students need to sell themselves to the world.</h1>
-                    <h1 className="divider-section-title">And they could use a place to practice."</h1>
+                    <h1 className="divider-section-title">Students need to sell themselves to the world.</h1>
+                    <h1 className="divider-section-title">And they could use a place to practice.</h1>
                 </div>
             </div>
 
@@ -152,10 +152,6 @@ function Home() {
                     <SimCard
                         title="Interview Practice"
                         description="Complete a Panel Interview. Learn and practice using the STAR model."
-                    />
-                    <SimCard
-                        title="Handling Objections"
-                        description="Learn and practice a 4 step model to handling objections."
                     />
                     <SimCard
                         title="Handling Objections"
@@ -212,7 +208,9 @@ function Home() {
                         </div>
                     </div>
                     <div className="feature-section-3b">
-                        <img src={data} className="feature-visual" alt="data-report-screenshot" />
+                        <video className="feature-visual" autoPlay loop muted>
+                            <source src={dataPreview} type="video/mp4" />
+                        </video>
                     </div>
                 </div>
                 <div className="feature-section-4" data-aos="fade-left">
@@ -253,7 +251,7 @@ function Home() {
                 <img className="divider2-curve-2" src={divider4} />
                 <div className="social-proof-divider2">
                     <h1 className="divider2-section-title">Ready to get started?</h1>
-                    <a to="/demo" href="/demo" eventKey="/demo" style={{textDecoration: "none"}}><button className="cta-btn-2">Schedule a Demo</button></a>
+                    <a href="/demo" style={{textDecoration: "none"}}><button className="cta-btn-2">Schedule a Demo</button></a>
                 </div>
                 <div className="option-section-topper"></div>
             </div>
@@ -262,40 +260,44 @@ function Home() {
             <div className="option-section">
                 <h1 className="option-title">International Students benefit most by using InStage.</h1>
                 <div className="example-btn-container">
-                    <button
-                        className="active-example"
-                        ref={example1}
-                        onClick={() => switchExample("example-1")}
-                        >Recruiting
-                    </button>
-                    <div className="example-arrow-container">
-                        {exampleCard === "example-1" && (
-                        <img src={rightArrow2} className="example-arrow" data-aos="zoom-in-right" alt="right-arrow" />
-                        )}
+                    <div className="active-example" data-aos="zoom-in" ref={example1} onMouseEnter={console.log("Focus!")}>
+                    {/* onClick={() => switchExample("example-1")} */}
+                        <h2 className="example-title">Recruiting</h2>
+                        <div className="option-textbox">
+                            <p className="example-text">Use InStage to efficiently conduct screening interviews.</p>
+                            <p className="example-text">Showcase immersive learning capacity to candidates.</p>
+                        </div>
                     </div>
-                    <button
-                        className="example-btn"
-                        ref={example2}
-                        onClick={() => switchExample("example-2")}
-                        >Retaining
-                    </button>
                     <div className="example-arrow-container">
-                        {exampleCard === "example-2" && (
+                        {/* {exampleCard === "example-1" && (
+                        <img src={rightArrow2} className="example-arrow" data-aos="zoom-in-right" alt="right-arrow" />
+                        )} */}
+                    </div>
+                    <div className="active-example" data-aos="zoom-in" data-aos-delay="600" ref={example2}>
+                        <h2 className="example-title">Retaining</h2>
+                        <div className="option-textbox">
+                            <p className="example-text">Increase online learning engagement.</p>
+                            <p className="example-text">InStage users report 94% more confidence.</p>
+                        </div>
+                    </div>
+                    <div className="example-arrow-container">
+                        {/* {exampleCard === "example-2" && (
                         <img src={rightArrow2} className="example-arrow" data-aos="zoom-in-right" alt="right-arrow" />
                         )}
                         {exampleCard === "example-3" && (
                         <img src={leftArrow2} className="example-arrow" data-aos="zoom-in-left" alt="left-arrow" />
-                        )}
+                        )} */}
                     </div>
-                    <button
-                        className="example-btn"
-                        ref={example3}
-                        onClick={() => switchExample("example-3")}
-                        >Transitioning
-                    </button>
+                    <div className="active-example" data-aos="zoom-in" data-aos-delay="1200" ref={example3}>
+                        <h2 className="example-title">Recruiting</h2>
+                        <div className="option-textbox">
+                            <p className="example-text">Employers say that they want students with better soft-skills.</p>
+                            <p className="example-text">Learn interviewing norms and increase.</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="example-container">
-                        <div className="example-card">
+                        {/* <div className="example-card">
                             {exampleCard === "example-1" && (
                                 <div className="example-1" data-aos="fade-right">
                                     <p className="example-text">Use InStage to efficiently conduct screening interviews.</p>
@@ -314,7 +316,7 @@ function Home() {
                                     <p className="example-text">Learn interviewing norms and increase.</p>
                                 </div>
                             )}
-                        </div>
+                        </div> */}
                 </div>
                 <h1 className="option-subtitle">Student Testimonials</h1>
                 <ReactPlayer className="video-3" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" />
@@ -328,12 +330,12 @@ function Home() {
                     <div className="pricing-unlimited bounce">
                         <h2 className="pricing-card-title">Unlimited Practice Sessions</h2>
                         <p className="pricing-card-text">Students can book an unlimited number of practice sessions during the semester.</p>
-                        <a to="/pricing" href="/pricing" eventKey="/pricing" style={{textDecoration: "none"}}><button className="pricing-card-btn">Learn More</button></a>
+                        <a href="/pricing" style={{textDecoration: "none"}}><button className="pricing-card-btn">Learn More</button></a>
                     </div>
                     <div className="pricing-single bounce">
                         <h2 className="pricing-card-title">Single Practice Sessions</h2>
                         <p className="pricing-card-text">Students receive a session link that allows them to book a single practice session.</p>
-                        <a to="/pricing" href="/pricing" eventKey="/pricing" style={{textDecoration: "none"}}><button className="pricing-card-btn">Learn More</button></a>
+                        <a href="/pricing" style={{textDecoration: "none"}}><button className="pricing-card-btn">Learn More</button></a>
                     </div>
                     <div className="pricing-detail-section">
                         <div className="pricing-section-text-box">
@@ -374,7 +376,7 @@ function Home() {
                 <div className="cta-detail-container">
                     <h1 className="cta-title">Want to learn more?</h1>
                     <h2 className="cta-text1">If you’re ready to learn more about InStage, click the link below and try your very own simulated demo. From there, you can decide if InStage is right for you.</h2>
-                    <a to="/demo" href="/demo" eventKey="/demo" style={{textDecoration: "none"}}>
+                    <a href="/demo" style={{textDecoration: "none"}}>
                         <button className="cta-btn-3">Schedule demo</button>
                     </a>
 

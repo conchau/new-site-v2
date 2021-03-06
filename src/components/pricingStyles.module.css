@@ -1,5 +1,5 @@
 .pricingPage {
-  height: 1200px;
+  min-height: 2250px;
   padding: 150px 0 0;
 }
 
@@ -9,10 +9,16 @@
   font-size: 40px;
 }
 
+.emphasis {
+  display: inline-block;
+  text-decoration: underline #00a9af;
+  margin: 0;
+}
+
 .pricingButtonContainer {
   display: flex;
   justify-content: center;
-  margin: 50px auto;
+  margin: 25px auto;
 }
 
 .pricingButtonContainer button {
@@ -40,4 +46,413 @@
 .single:hover {
   transform: scale(1.01);
   color: #00a9af;
+}
+
+.pricingSubtitle {
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  margin: 50px auto 25px;
+}
+
+.sections {
+  /* display: flex; */
+  padding: 0 10%;
+}
+
+.unlimitedSection1 {
+  width: 100%;
+  min-height: 600px;
+  margin: 75px auto 0;
+  padding: 0 15%;
+}
+
+.singleSection1 {
+  width: 100%;
+  min-height: 1000px;
+  margin: 75px auto 0;
+  padding: 0 15%;
+}
+
+.unlimitedSection2 {
+  width: 70%;
+  height: 1300px;
+  background-color: rgb(234, 234, 234);
+  padding: 50px 5%;
+  margin: 0 auto;
+}
+
+.singleSection2 {
+  width: 70%;
+  height: 1300px;
+  background-color: rgb(234, 234, 234);
+  padding: 50px 5%;
+  margin: 50px auto 0;
+}
+
+.unlimitedContainer {
+  display: flex;
+  height: 500px;
+}
+
+.singleContainer {
+  height: 500px;
+}
+
+.optionContainer {
+  height: 500px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.optionGroup {
+  width: 100%;
+  height: 225px;
+  margin: 0 0 25px;
+  padding: 2% 3%;
+  background-color: #303d7c;
+  color: white;
+  border-radius: 10px;
+}
+
+.optionInstitution {
+  width: 100%;
+  height: 225px;
+  padding: 2% 3%;
+  background-color: #4e00ccd2;
+  color: white;
+  border-radius: 10px;
+}
+
+.optionTextContainer {
+  display: flex;
+  margin: 0 auto;
+  height: 125px;
+}
+
+.optionTitle {
+  width: 70%;
+  padding: 0 2% 0 0;
+}
+
+.optionPrice {
+  font-size: 80px;
+  font-weight: 500;
+}
+
+.optionPriceText {
+  text-align: right;
+  font-size: 20px;
+}
+
+.optionText {
+  text-align: right;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.unlimitedDetailContainer {
+  height: 500px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.unlimitedDetailSection {
+  width: 80%;
+  height: 400px;
+  margin: 0 10%;
+  padding: 10px 0 0;
+}
+
+.unlimitedSectionTextBox {
+  display: flex;
+  margin: 25px 0;
+}
+
+.rightArrowPricing {
+  height: 27px;
+  width: 27px;
+}
+
+.unlimitedDetailText {
+  height: 25%;
+  margin: 0;
+  padding: 0 0 0 3%;
+  font-size: 20px;
+}
+
+.socialProof1 {
+  width: 90%;
+  height: 50px;
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.proofLogo {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+.formTitle {
+  font-weight: 700;
+  color: #414042;
+}
+
+.singleStep1 {
+  display: flex;
+  width: 100%;
+  height: 75px;
+  margin: 0 auto 100px;
+}
+
+.singleNumber {
+  margin-right: 5%;
+  height: 75px;
+  width: 75px;
+  padding: 6px 25px;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  border-radius: 50%;
+  background-image: linear-gradient(#00a9af, #7ad6dd);
+}
+
+.simMenu2 {
+  width: 30%;
+}
+
+.showLibrary {
+  margin: 10px 0 0 5%;
+  height: 55px;
+  width: 30%;
+  background-color: #00a9af;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  box-shadow: -1px 1px 5px grey;
+}
+
+.showLibrary:hover {
+  opacity: 80%;
+  transform: scale(1.01);
+}
+
+.singleStep2 {
+  display: flex;
+  height: 250px;
+}
+
+.singleStep2a {
+  display: flex;
+  width: 100%;
+}
+
+.calculatorContainer {
+  width: 34%;
+}
+
+.singleSubtitle {
+  font-size: 20px;
+  height: 75px;
+  width: 80%;
+  padding: 0 1% 0 0;
+}
+
+.inputContainer {
+  display: flex;
+  margin: 0 0 25px;
+}
+
+input {
+  height: 50px;
+  width: 80px;
+  font-size: 30px;
+  text-align: right;
+}
+
+.resultContainer {
+  display: flex;
+}
+
+.result {
+  font-size: 30px;
+}
+
+.singleDetailContainer {
+  width: 60%;
+  margin-left: 5%;
+}
+
+.singleSectionTextBox {
+  display: flex;
+  margin: 0 0 25px;
+}
+
+.singleDetailText {
+  height: 25%;
+  margin: 0;
+  padding: 0 0 0 3%;
+  font-size: 20px;
+}
+
+.singleStep3 {
+  display: flex;
+  height: 100px;
+}
+
+.singleStep3a {
+  display: flex;
+  width: 100%;
+}
+
+.step3Subtitle {
+  padding: 15px 0;
+  font-size: 30px;
+}
+
+.singleDetailContainer2 {
+  width: 90%;
+  padding: 0 0 0 75px;
+  margin-left: 5%;
+}
+
+.singleContainer2 {
+  display: flex;
+  height: 200px;
+  margin: 50px 0 0;
+}
+
+.singleContainer2a {
+  margin: 0 auto;
+  width: 50%;
+  padding: 25px 0;
+}
+
+.finalPrice {
+  margin: 0 0 0 25%;
+  height: 55px;
+  width: 70%;
+  background-color: #00a9af;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  box-shadow: -1px 1px 5px grey;
+}
+
+.singleText {
+  margin: 10px 0 0 25%;
+}
+
+.singleContainer2b {
+  width: 50%;
+}
+
+/* /
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/ */
+
+@media screen and (max-width: 1200px) {
+  .unlimitedSections {
+    padding: 0 10%;
+  }
+
+  .unlimitedSection1 {
+    width: 100%;
+    min-height: 900px;
+    margin: 75px auto 0;
+    padding: 0;
+  }
+
+  .unlimitedContainer {
+    display: inline-block;
+    height: 500px;
+    width: 100%;
+  }
+
+  .optionContainer {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .unlimitedDetailContainer {
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .unlimitedDetailSection {
+    width: 50%;
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .socialProof1 {
+    width: 100%;
+    margin: 0;
+  }
+}
+/*
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/ */
+
+@media screen and (max-width: 830px) {
+  .unlimitedPage {
+    min-height: 3000px;
+    padding: 150px 0 0;
+  }
+
+  .unlimitedTitle {
+    margin: 0 10%;
+  }
+
+  .unlimitedButtonContainer {
+    margin: 25px 10%;
+  }
+
+  .unlimitedSection1 {
+    min-height: 1100px;
+  }
+
+  .unlimitedSections {
+    padding: 0;
+  }
+
+  .unlimitedDetailSection {
+    width: 60%;
+    height: 350px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 531px) {
+  .optionContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .unlimitedDetailSection {
+    height: 400px;
+  }
 }
