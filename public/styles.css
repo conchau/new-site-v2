@@ -455,7 +455,7 @@ nav {
   height: 350px;
   width: 250px;
   background-color: white;
-  border: 2px solid #303d7c;
+  border: 2px solid grey;
   border-radius: 20px;
   box-shadow: -1px 1px 5px grey;
   text-align: left;
@@ -744,7 +744,7 @@ nav {
   /* border-bottom: 3px solid white; */
   font-size: 30px;
   color: white;
-  width: 30%;
+  width: 50%;
   text-shadow: 1px 1px darkgray;
 }
 
@@ -774,18 +774,6 @@ nav {
 
 .example-card {
   display: flex;
-}
-
-.option-1 {
-  width: 30%;
-}
-
-.option-2 {
-  width: 30%;
-}
-
-.option-3 {
-  width: 30%;
 }
 
 .option-text-box {
@@ -851,6 +839,15 @@ nav {
   border: none;
   /* position: absolute; */
   box-shadow: -1px 1px 5px grey;
+}
+
+.divider-curve-3 {
+  position: relative;
+  height: auto;
+  width: 100%;
+  bottom: 150px;
+  z-index: -1;
+  margin-bottom: -400px;
 }
 
 /* PRICING SECTION */
@@ -2296,6 +2293,13 @@ nav {
     padding: 1% 1% 1% 2%;
     height: 200px;
     width: 50%;
+  }
+
+  .divider-curve-3 {
+    height: 200px;
+    bottom: 350px;
+    z-index: -1;
+    margin-bottom: -700px;
   }
 
   .pricing-detail-section {

@@ -322,6 +322,8 @@ function Home() {
                 <ReactPlayer className="video-3" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" />
             </div>
 
+            <img className="divider-curve-3" src={divider2} />
+
             {/* PRICING SECTION */}
             <div className="pricing-section">
                 <h1 className="pricing-title">Remotely engage your students with InStage Practice Sessions</h1>
