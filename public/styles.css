@@ -85,9 +85,20 @@ body {
   transform: translateY(0);
 }
 
+.contact-bar a:hover {
+  text-decoration: none !important;
+  opacity: 80%;
+  transform: scale(1.01);
+}
+
 .contact-bar-container {
   display: flex;
   margin: 0 25px;
+  color: black;
+}
+
+.contact-bar-container:hover {
+  color: #00a9af;
 }
 
 .contact-bar-icon {

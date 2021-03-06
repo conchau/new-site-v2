@@ -29,18 +29,25 @@ function Header (){
         <div>
             {pos === "top" && (
                 <div className="contact-bar">
-                    <div className="contact-bar-container">
-                        <img className="contact-bar-icon" src={profile} alt="profile-icon" />
-                        <p>Login</p>
-                    </div>
-                    <div className="contact-bar-container">
-                        <img className="contact-bar-icon" src={headset} alt="support-icon" />
-                        <p>Support</p>
-                    </div>
-                    <div className="contact-bar-container">
-                        <img className="contact-bar-icon" src={phone} alt="phone-icon" />
-                        <p>Contact Sales: 221-223-2031</p>
-                    </div>
+                    <a href="https://www.instage.io/login">
+                        <div className="contact-bar-container">
+                            <img className="contact-bar-icon" src={profile} alt="profile-icon" />
+                            <p>Login</p>
+                        </div>
+                    </a>
+                    <a href="https://help.instage.io">
+                        <div className="contact-bar-container">
+
+                            <img className="contact-bar-icon" src={headset} alt="support-icon" />
+                            <p>Support</p>
+                        </div>
+                    </a>
+                    <a href="tel:+9052428669">
+                        <div className="contact-bar-container">
+                            <img className="contact-bar-icon" src={phone} alt="phone-icon" />
+                            <p>Contact Sales: 905-242-8669</p>
+                        </div>
+                    </a>
                 </div>
             )}
             <Navbar collapseOnSelect expand="xl" className="color-navbar">
