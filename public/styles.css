@@ -192,6 +192,10 @@ nav {
   color: white !important;
 }
 
+.cta-btn-header.active:after {
+  border-bottom: none !important;
+}
+
 /* FOOTER SECTION */
 .footer {
   background-color: #414042;
