@@ -1,5 +1,7 @@
 import React, {useState, useEffect, useRef } from "react";
 import axiosConfig from "./axiosConfig";
+import ModalVideo from 'react-modal-video'
+import "react-modal-video/scss/modal-video.scss";
 import { Player } from "video-react";
 import ReactPlayer from "react-player";
 import { useHistory } from "react-router-dom";
@@ -14,6 +16,7 @@ import divider1 from "../images/divider1.png";
 import divider2 from "../images/divider2.png";
 import divider3 from "../images/divider3.png";
 import divider4 from "../images/divider4.png";
+import divider5 from "../images/divider5.png";
 import demoBackground from "../images/demo-background.png";
 import Seneca from "../images/Seneca.png";
 import Humber from "../images/Humber.png";
@@ -23,6 +26,7 @@ import Educator from "../images/educator.png";
 import like from "../images/like.png";
 import padlock from "../images/padlock.png";
 import check from "../images/check.png";
+import checkGreen from "../images/checkgreen.png";
 import calendar from "../images/calendar.png";
 import chart from "../images/chart.png";
 import user from "../images/user.png";
@@ -48,6 +52,9 @@ function Home() {
 
     const [explainerTitle, setExplainerTitle] = useState("To help students stand out to employers...")
     const [exampleCard, setExampleCard] = useState("example-1");
+
+    // React Modal Video Component implementation
+    const [isOpen, setOpen] = useState(false)
 
     //References to example type buttons for updating the CSS on toggle
     const example1 = useRef(null);
@@ -97,7 +104,9 @@ function Home() {
                 </div>
                 <div className="hero-section-2">
                     <div className="hero-section-2-fixed">
-                            <ReactPlayer className="video-1" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" />
+                            {/* <ReactPlayer className="video-1" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" /> */}
+                            <ModalVideo className="video-1" channel='vimeo' autoplay controls="false" isOpen={isOpen} allowFullScreen videoId="508210873" onClose={() => setOpen(false)} />
+                            <button className="video-1-btn" onClick={()=> setOpen(true)}>VIEW DEMO</button>
                     </div>
                     <div className="social-proof-1">
                         <div className="logo-container">
@@ -118,8 +127,8 @@ function Home() {
                 <img className="divider-curve-1" src={divider1} />
                 <img className="divider-curve-2" src={divider2} />
                 <div className="social-proof-divider">
-                    <h1 className="divider-section-title">Students need to sell themselves to the world.</h1>
-                    <h1 className="divider-section-title">And they could use a place to practice.</h1>
+                    <h1 className="divider-section-title">"Students need to sell themselves to the world.</h1>
+                    <h1 className="divider-section-title">And they could use a place to practice."</h1>
                 </div>
             </div>
 
@@ -138,7 +147,7 @@ function Home() {
             {/* SIM SECTION */}
             <div className="sim-section">
                 <h1 className="sim-title">The soft-skills employers want to see</h1>
-                <h2 className="sim-subtitle">Access a growing library of simulations...</h2>
+                <h2 className="sim-subtitle">Access a growing library of simulations.</h2>
                 <Carousel
                     arrows
                     itemWidth={300}
@@ -148,14 +157,17 @@ function Home() {
                     <SimCard
                         title="Self-Introduction"
                         description="Learn the 4 steps of a self-introduction and practice introducing yourself to an employer!"
+                        time="5:00"
                     />
                     <SimCard
                         title="Interview Practice"
                         description="Complete a Panel Interview. Learn and practice using the STAR model."
+                        time="25:00"
                     />
                     <SimCard
                         title="Handling Objections"
                         description="Learn and practice a 4 step model to handling objections."
+                        time="15:00"
                     />
                 </Carousel>
             </div>
@@ -192,7 +204,7 @@ function Home() {
                             <img src={rightArrow} className="right-arrow"/><p className="feature-text">Provide students with an opportunity to engage in realistic practice in a safe, virtual environment.</p>
                         </div>
                         <div className="feature-section-text-box">
-                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Something about why experiential / immersive learning is superior (data points)</p>
+                            <img src={rightArrow} className="right-arrow"/><p className="feature-text">Students can retain 75% more by "doing."</p>
                         </div>
                     </div>
                 </div>
@@ -208,8 +220,8 @@ function Home() {
                         </div>
                     </div>
                     <div className="feature-section-3b">
-                        <video className="feature-visual" autoPlay loop muted>
-                            <source src={dataPreview} type="video/mp4" />
+                        <video className="feature-visual data" autoPlay loop muted>
+                            <source src={dataPreview} type="video/mp4" className="data-video" />
                         </video>
                     </div>
                 </div>
@@ -251,7 +263,7 @@ function Home() {
                 <img className="divider2-curve-2" src={divider4} />
                 <div className="social-proof-divider2">
                     <h1 className="divider2-section-title">Ready to get started?</h1>
-                    <a href="/demo" style={{textDecoration: "none"}}><button className="cta-btn-2">Schedule a Demo</button></a>
+                    <a href="/demo" style={{textDecoration: "none"}}><button className="cta-btn-2">Schedule a Private Demo</button></a>
                 </div>
                 <div className="option-section-topper"></div>
             </div>
@@ -263,35 +275,47 @@ function Home() {
                     <div className="active-example" data-aos="zoom-in" ref={example1} onMouseEnter={console.log("Focus!")}>
                     {/* onClick={() => switchExample("example-1")} */}
                         <h2 className="example-title">Recruiting</h2>
-                        <div className="option-textbox">
+                        <div className="example-text-box">
+                            <img src={check} className="example-checkmark" alt="checkmark" />
                             <p className="example-text">Use InStage to efficiently conduct screening interviews.</p>
+                        </div>
+                        <div className="example-text-box">
+                            <img src={check} className="example-checkmark" alt="checkmark" />
                             <p className="example-text">Showcase immersive learning capacity to candidates.</p>
                         </div>
                     </div>
-                    <div className="example-arrow-container">
-                        {/* {exampleCard === "example-1" && (
+                    {/* <div className="example-arrow-container">
+                        {exampleCard === "example-1" && (
                         <img src={rightArrow2} className="example-arrow" data-aos="zoom-in-right" alt="right-arrow" />
-                        )} */}
-                    </div>
+                        )}
+                    </div> */}
                     <div className="active-example" data-aos="zoom-in" data-aos-delay="600" ref={example2}>
                         <h2 className="example-title">Retaining</h2>
-                        <div className="option-textbox">
+                        <div className="example-text-box">
+                            <img src={check} className="example-checkmark" alt="checkmark" />
                             <p className="example-text">Increase online learning engagement.</p>
+                        </div>
+                        <div className="example-text-box">
+                            <img src={check} className="example-checkmark" alt="checkmark" />
                             <p className="example-text">InStage users report 94% more confidence.</p>
                         </div>
                     </div>
-                    <div className="example-arrow-container">
-                        {/* {exampleCard === "example-2" && (
+                    {/* <div className="example-arrow-container">
+                        {exampleCard === "example-2" && (
                         <img src={rightArrow2} className="example-arrow" data-aos="zoom-in-right" alt="right-arrow" />
                         )}
                         {exampleCard === "example-3" && (
                         <img src={leftArrow2} className="example-arrow" data-aos="zoom-in-left" alt="left-arrow" />
-                        )} */}
-                    </div>
+                        )}
+                    </div> */}
                     <div className="active-example" data-aos="zoom-in" data-aos-delay="1200" ref={example3}>
-                        <h2 className="example-title">Recruiting</h2>
-                        <div className="option-textbox">
+                        <h2 className="example-title">Transitioning</h2>
+                        <div className="example-text-box">
+                            <img src={check} className="example-checkmark" alt="checkmark" />
                             <p className="example-text">Employers say that they want students with better soft-skills.</p>
+                        </div>
+                        <div className="example-text-box">
+                            <img src={check} className="example-checkmark" alt="checkmark" />
                             <p className="example-text">Learn interviewing norms and increase.</p>
                         </div>
                     </div>
@@ -319,7 +343,15 @@ function Home() {
                         </div> */}
                 </div>
                 <h1 className="option-subtitle">Student Testimonials</h1>
-                <ReactPlayer className="video-3" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" />
+                <div className="option-testimonial-container">
+                    <div className="option-testimonial-section-1">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl purus in mollis nunc sed id. Ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Maecenas pharetra convallis posuere morbi."</p>
+                        <p>- Jose Student</p>
+                    </div>
+                    <div className="option-testimonial-section-2">
+                        <ReactPlayer className="video-3" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" />
+                    </div>
+                </div>
             </div>
 
             <img className="divider-curve-3" src={divider2} />
@@ -341,13 +373,13 @@ function Home() {
                     </div>
                     <div className="pricing-detail-section">
                         <div className="pricing-section-text-box">
-                            <img src={rightArrow} className="right-arrow-pricing"/><p className="pricing-detail-text">No downloads or accounts are required to get started</p>
+                            <img src={checkGreen} className="right-arrow-pricing"/><p className="pricing-detail-text">No downloads or accounts are required to get started</p>
                         </div>
                         <div className="pricing-section-text-box">
-                            <img src={rightArrow} className="right-arrow-pricing"/><p className="pricing-detail-text">Instantly deploy remote-simulations to your students</p>
+                            <img src={checkGreen} className="right-arrow-pricing"/><p className="pricing-detail-text">Instantly deploy remote-simulations to your students</p>
                         </div>
                         <div className="pricing-section-text-box">
-                            <img src={rightArrow} className="right-arrow-pricing"/><p className="pricing-detail-text">Immersive learning with data-driven feedback</p>
+                            <img src={checkGreen} className="right-arrow-pricing"/><p className="pricing-detail-text">Immersive learning with data-driven feedback</p>
                         </div>
                     </div>
                 </div>
@@ -369,7 +401,7 @@ function Home() {
                 </div>
             </div>
             <div className="social-divider-bottom">
-
+                <img className="social-divider-bottom-curve" src={divider5} />
             </div>
 
             {/* CTA SECTION */}

@@ -7,13 +7,13 @@
 }
 
 .heroSection1 {
-  width: 50%;
+  width: 55%;
   height: 600px;
   margin: 0 0 0 15%;
 }
 
 .heroSection2 {
-  width: 50%;
+  width: 45%;
   height: 600px;
   margin: 0 15% 0 0;
 }
@@ -30,7 +30,7 @@
 }
 
 .heroTitle {
-  width: 80%;
+  width: 100%;
   margin: 0;
   text-align: left;
   font-weight: 700;
@@ -38,7 +38,7 @@
 }
 
 .heroSubtitle {
-  width: 80%;
+  width: 100%;
   margin: 25px 0 50px;
   text-align: left;
   font-weight: 500;

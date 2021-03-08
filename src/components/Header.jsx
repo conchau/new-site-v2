@@ -29,24 +29,17 @@ function Header (){
         <div>
             {pos === "top" && (
                 <div className="contact-bar">
-                    <a href="https://www.instage.io/login">
-                        <div className="contact-bar-container">
+                    <a href="https://www.instage.io/login" className="contact-bar-container">
                             <img className="contact-bar-icon" src={profile} alt="profile-icon" />
                             <p>Login</p>
-                        </div>
                     </a>
-                    <a href="https://help.instage.io">
-                        <div className="contact-bar-container">
-
+                    <a href="https://help.instage.io" className="contact-bar-container">
                             <img className="contact-bar-icon" src={headset} alt="support-icon" />
                             <p>Support</p>
-                        </div>
                     </a>
-                    <a href="tel:+9052428669">
-                        <div className="contact-bar-container">
+                    <a href="tel:+9052428669" className="contact-bar-container">
                             <img className="contact-bar-icon" src={phone} alt="phone-icon" />
                             <p>Contact Sales: 905-242-8669</p>
-                        </div>
                     </a>
                 </div>
             )}
