@@ -118,7 +118,6 @@ body {
 nav {
   min-height: 100px;
   position: fixed !important;
-  left: 0;
   z-index: 3;
   box-shadow: 0 5px 5px rgba(211, 211, 211, 0.5);
 }
@@ -132,6 +131,11 @@ nav {
 .color-navbar {
   position: relative;
   background-color: white;
+  padding: 0 !important;
+}
+
+.navbar {
+  padding: 0 !important;
   width: 100% !important;
 }
 
@@ -976,6 +980,29 @@ nav {
   width: 50%;
 }
 
+.video-3-img {
+  /* position: absolute; */
+  margin: 25px auto 0;
+  height: auto;
+  width: 100% !important;
+  border-radius: 5px;
+  border: none;
+  box-shadow: -1px 1px 5px grey;
+}
+
+.video-3-btn {
+  position: absolute;
+  margin: 6% 11%;
+  z-index: 2;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #00a9af;
+  border: none;
+  color: white;
+  font-size: 40px;
+}
+
 .video-3 {
   margin: 0;
   height: auto;
@@ -1423,6 +1450,10 @@ nav {
     height: 0;
   }
 
+  .option-section-topper {
+    bottom: 750px;
+  }
+
   /* CTA SECTION */
   .cta-section {
     min-height: 700px;
@@ -1530,6 +1561,10 @@ nav {
     padding: 5px 0;
   }
 
+  .contact-bar-container.right-padding {
+    padding: 5px 0;
+  }
+
   .contact-bar-icon {
     width: 20px;
     height: 20px;
@@ -1537,7 +1572,11 @@ nav {
   }
 
   .color-navbar {
-    padding: 0 10% 0 10% !important;
+    padding: 0 5% !important;
+  }
+
+  .logo {
+    margin: 0 !important;
   }
 
   /* .navbar-nav {
@@ -1935,19 +1974,31 @@ nav {
 
   .option-testimonial-container {
     display: block;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 15%;
+    margin: 0;
   }
 
   .option-testimonial-section-1 {
     width: 100%;
+    padding: 5% 0;
   }
 
   .option-testimonial-section-2 {
     width: 100%;
+    height: 400px;
   }
 
   .video-3 {
-    height: auto;
+    margin: 0;
+    width: 100% !important;
+  }
+
+  .video-3-btn {
+    margin: 15% 28%;
+    height: 150px;
+    width: 150px;
+    font-size: 40px;
   }
 
   /* PRICING SECTION MOBILE */
@@ -2208,6 +2259,24 @@ nav {
   .example-text-box {
     padding: 0 10% 0 15%;
   }
+
+  .video-1-btn {
+    margin: 14% 26%;
+    height: 125px;
+    width: 125px;
+  }
+
+  .video-2-btn {
+    margin: 14% 26%;
+    height: 125px;
+    width: 125px;
+  }
+
+  .video-3-btn {
+    margin: 14% 26%;
+    height: 125px;
+    width: 125px;
+  }
 }
 
 /* SMALL MOBILE SCREEN ADJUSTMENTS */
@@ -2366,13 +2435,23 @@ nav {
   }
 
   .pricing-card-text {
-    font-size: 20px;
+    padding: 0 6%;
   }
 
   .pricing-card-btn {
     width: 50%;
     margin: 0 25%;
   }
+
+  /* .divider2-curve-1 {
+    height: 250px;
+    bottom: 200px;
+  }
+
+  .divider2-curve-2 {
+    height: 250px;
+    bottom: 200px;
+  } */
 }
 
 @media screen and (max-width: 600px) {
@@ -2386,6 +2465,11 @@ nav {
 
   .demo-section-1 {
     height: 400px;
+  }
+
+  .pricing-card-text {
+    font-size: 20px;
+    padding: 0 4%;
   }
 
   .social-proof-divider2 {
@@ -2450,7 +2534,7 @@ nav {
   }
 
   .feature-section {
-    height: 3900px;
+    height: 4000px;
   }
 
   .feature-title {
@@ -2459,14 +2543,14 @@ nav {
   }
 
   .feature-section-1 {
-    height: 650px;
+    height: 700px;
     padding: 0 10%;
-    margin-bottom: 0;
+    margin: 50px auto 0;
   }
 
   .feature-section-1a {
     width: 100%;
-    height: 400px;
+    height: 450px;
     padding: 2% 0;
   }
 
@@ -2477,9 +2561,9 @@ nav {
   }
 
   .feature-section-2 {
-    height: 650px;
+    height: 700px;
     padding: 0 10%;
-    margin: 50px auto 0;
+    margin: 25px auto 0;
   }
 
   .feature-section-2a {
@@ -2490,19 +2574,19 @@ nav {
 
   .feature-section-2b {
     width: 100%;
-    min-height: 200px;
+    height: 450px;
     padding: 0;
   }
 
   .feature-section-3 {
-    height: 650px;
+    height: 700px;
     padding: 0 10%;
-    margin: 50px auto 0;
+    margin: 0 auto;
   }
 
   .feature-section-3a {
     width: 100%;
-    min-height: 200px;
+    height: 450px;
     padding: 2% 0;
   }
 
@@ -2513,9 +2597,9 @@ nav {
   }
 
   .feature-section-4 {
-    height: 650px;
+    height: 700px;
     padding: 0 10%;
-    margin: 50px auto 0;
+    margin: 25px auto 0;
   }
 
   .feature-section-4a {
@@ -2526,19 +2610,19 @@ nav {
 
   .feature-section-4b {
     width: 100%;
-    min-height: 200px;
+    height: 450px;
     padding: 0;
   }
 
   .feature-section-5 {
-    height: 650px;
+    height: 700px;
     padding: 0 10%;
-    margin: 50px auto 0;
+    margin: 0 auto;
   }
 
   .feature-section-5a {
     width: 100%;
-    min-height: 200px;
+    height: 450px;
     padding: 2% 0;
   }
 
@@ -2581,7 +2665,7 @@ nav {
   }
 
   .option-subtitle {
-    margin: 50px auto 0;
+    margin: 75px auto 0;
   }
 
   .option-section-topper {
@@ -2601,8 +2685,12 @@ nav {
   }
 
   .pricing-detail-section {
-    height: 350px;
+    height: 300px;
     padding: 2% 0;
+  }
+
+  .social-divider-section {
+    margin: 50px auto 0;
   }
 
   .social-divider-container {
@@ -2629,6 +2717,24 @@ nav {
 }
 
 @media screen and (max-width: 470px) {
+  .contact-bar-container {
+    font-size: 10px;
+  }
+
+  .hero-title {
+    padding: 0 10%;
+  }
+
+  .hero-section-1 {
+    height: 550px;
+  }
+
+  .video-1-btn {
+    margin: 16% 25%;
+    height: 80px;
+    width: 80px;
+  }
+
   .social-proof-divider {
     bottom: 300px;
   }
@@ -2641,12 +2747,26 @@ nav {
     height: 350px;
   }
 
+  .video-2-btn {
+    margin: 16% 25%;
+    height: 80px;
+    width: 80px;
+  }
+
   .sim-section {
     height: 775px;
   }
 
   .sim-subtitle {
     margin-bottom: 25px;
+  }
+
+  .feature-title {
+    padding: 0 10%;
+  }
+
+  .cta-section {
+    height: 800px;
   }
 }
 

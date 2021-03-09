@@ -70,6 +70,8 @@ function Home() {
 
     // React Modal Video Component implementation
     const [isOpen1, setOpen1] = useState(false)
+    const [isOpen2, setOpen2] = useState(false)
+    const [isOpen3, setOpen3] = useState(false)
 
     //References to example type buttons for updating the CSS on toggle
     const example1 = useRef(null);
@@ -153,9 +155,9 @@ function Home() {
             <div className="demo-section">
                 <div className="demo-section-1">
                     {/* <ReactPlayer className="video-2" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" /> */}
-                    <button className="video-2-btn" onClick={()=> setOpen1(true)}>▶︎</button>
-                            <img src={screenshot} className="video-2-img" />
-                            <ModalVideo className="video-2" channel='vimeo' autoplay controls="false" isOpen={isOpen1} allowFullScreen videoId="508210873" onClose={() => setOpen1(false)} />
+                    <button className="video-2-btn" onClick={()=> setOpen2(true)}>▶︎</button>
+                    <img src={screenshot} className="video-2-img" />
+                    <ModalVideo className="video-2" channel='vimeo' autoplay controls="false" isOpen={isOpen2} allowFullScreen videoId="508210873" onClose={() => setOpen2(false)} />
                 </div>
                 <div className="demo-section-2">
                     <h1 className="demo-title">Watch the demo</h1>
@@ -481,7 +483,10 @@ function Home() {
                         <p>- Jose Student</p>
                     </div>
                     <div className="option-testimonial-section-2">
-                        <ReactPlayer className="video-3" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" />
+                        {/* <ReactPlayer className="video-3" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" /> */}
+                        <button className="video-3-btn" onClick={()=> setOpen3(true)}>▶︎</button>
+                        <img src={screenshot} className="video-3-img" />
+                        <ModalVideo className="video-3" channel='vimeo' autoplay controls="false" isOpen={isOpen3} allowFullScreen videoId="508210873" onClose={() => setOpen3(false)} />
                     </div>
                 </div>
             </div>
