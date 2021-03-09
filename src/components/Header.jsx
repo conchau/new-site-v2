@@ -29,7 +29,7 @@ function Header (){
         <div>
             {pos === "top" && (
                 <div className="contact-bar">
-                    <a href="https://www.instage.io/login" className="contact-bar-container">
+                    <a href="https://www.instage.io/login" className="contact-bar-container right-padding">
                             <img className="contact-bar-icon" src={profile} alt="profile-icon" />
                             <p>Login</p>
                     </a>
