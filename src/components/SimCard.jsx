@@ -13,22 +13,11 @@ function SimCard(props) {
 
     return (
         <div className="sim-card">
-            <img src={props.cover} className="sim-card-img"/>
             <h1 className="sim-card-title">{props.title}</h1>
+            <img src={props.cover} className="sim-card-img"/>
             <div className="sim-card-text-box">
                 <p className="sim-card-text">{props.description}</p>
             </div>
-
-            {/* <button ref={target} onClick={() => setShow(!show)}>
-                Click me!
-            </button>
-            <Overlay target={target.current} show={show} placement="right">
-                {(props) => (
-                <Tooltip id="overlay-example" {...props}>
-                    My Tooltip
-                </Tooltip>
-                )}
-            </Overlay> */}
 
 
             <div className="sim-characters-container">

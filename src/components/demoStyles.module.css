@@ -1,31 +1,42 @@
 .demoPage {
   display: flex;
-  height: 1200px;
+  height: 1300px;
   /* Note: for actual height, subtract header height (aka padding of this section) */
-  padding: 100px 15% 0;
+  padding: 150px 10% 0;
+  background-image: url("../images/educator.png");
+  background-repeat: no-repeat;
+  background-position-x: 115%;
+  background-position-y: bottom;
+}
+
+.demoPageBackground {
+  z-index: -2;
 }
 
 .section1 {
-  margin: 50px auto 0;
+  margin: 50px 0 0;
   width: 50%;
   padding: 0 5% 0 0;
 }
 
 .section2 {
-  margin: 50px auto 0;
-  width: 50%;
+  position: relative;
+  margin: 50px 0 0;
+  padding: 20px;
+  width: 40%;
+  background-color: rgba(234, 234, 234, 0.767);
 }
 
 .demoTitle {
   font-weight: 700;
   font-size: 40px;
-  margin: 0 0 10px;
+  margin: 0 0 25px;
 }
 
 .demoSubtitle {
   font-weight: 500;
   font-size: 30px;
-  margin: 0 0 10px;
+  margin: 0 0 50px;
 }
 
 .demoText {
@@ -39,6 +50,11 @@
   margin: 25px 0;
 }
 
+.rightArrowPricing {
+  height: 40px;
+  width: 40px;
+}
+
 .featureContainerText {
   margin: 0 0 0 10px;
   font-size: 30px;
@@ -47,8 +63,9 @@
 .socialProofContainer {
   height: 125px;
   padding: 3% 0;
+  margin: 75px 0 0;
   border-radius: 5px;
-  background-color: rgb(234, 234, 234);
+  background-color: rgba(234, 234, 234, 0.767);
   box-shadow: -1px 1px 5px grey;
 }
 
@@ -67,7 +84,47 @@
 
 .logo {
   width: 25%;
-  margin: 10px 0;
+  margin: 10px;
+}
+.humberLogo {
+  width: 31%;
+  margin: 10px;
+}
+
+.socialDividerContainer {
+  margin: 50px 0;
+  display: flex;
+}
+
+.socialDividerTextContainer {
+  width: 100%;
+}
+
+.socialDividerText {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.socialDividerNames {
+  display: flex;
+}
+
+.socialDividerPerson {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.socialDividerPosition {
+  font-size: 20px;
+  font-style: italic;
+  margin: 0;
+}
+
+.senecaLogo {
+  height: 100%;
+  width: auto;
+  margin: 7px 20px;
 }
 
 /* /
@@ -91,20 +148,70 @@
 @media screen and (max-width: 1400px) {
   .demoPage {
     display: block;
-    height: 2200px;
+    height: 2500px;
+    padding: 150px 20% 0;
   }
 
   .section1 {
     width: 100%;
     margin-bottom: 150px;
+    padding: 0;
+    text-align: center;
   }
 
   .section2 {
     width: 100%;
+  }
+
+  .demoText {
     padding: 0 5%;
+  }
+
+  .featureContainer {
+    padding: 0 5% 0 15%;
+    text-align: left;
   }
 
   .socialProofContainer {
     height: 150px;
+  }
+
+  .socialDividerContainer {
+    text-align: center;
+    padding: 0 5%;
+  }
+
+  .socialDividerNames {
+    text-align: center;
+    display: block;
+  }
+
+  .socialDividerPerson {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .demoPage {
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .demoPage {
+    height: 2700px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featureContainerText {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .demoPage {
+    padding: 150px 10% 0;
   }
 }

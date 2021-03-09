@@ -548,40 +548,50 @@ nav {
 }
 
 .sim-card {
-  height: 425px;
+  height: 375px;
   width: 275px;
   background-color: white;
   border-radius: 20px;
   box-shadow: -1px 1px 5px grey;
   text-align: left;
+  color: #00a9af;
 }
 
 .sim-card:hover {
   transform: scale(1.05);
   transition: 200ms linear;
   background-color: #41c1ca93;
+  color: #414042;
 }
 
 .sim-card-img {
   height: auto;
   width: 275px;
+  height: auto;
+  margin: 35px auto 0;
+}
+
+.sim-card-title {
+  opacity: 1;
+  font-size: 20px;
+  font-weight: 600;
+  width: 275px;
+  text-align: center;
+  position: absolute;
+  height: 30px;
+  padding: 5px 0;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.sim-card-title {
-  font-size: 20px;
-  margin: 10px 0;
-  padding: 0 8%;
-}
-
 .sim-card-text-box {
-  height: 150px;
+  height: 78px;
 }
 
 .sim-card-text {
   padding: 0 8%;
   font-size: 14px;
+  font-weight: 500;
   margin: 0 auto;
 }
 
@@ -845,12 +855,10 @@ nav {
 
 .example-btn-container {
   width: 70%;
-  margin: 0 auto;
-  height: 250px;
-  margin: 100px auto 50px;
+  height: 450px;
+  margin: 75px auto 50px;
   display: flex;
   justify-content: space-evenly;
-  padding: 0 5%;
 }
 
 .example-btn {
@@ -865,30 +873,40 @@ nav {
   /* border-bottom: 3px solid white; */
 }
 
-.active-example {
+.example-1 {
   background-color: transparent;
   border: none;
   /* border-bottom: 3px solid white; */
   font-size: 30px;
   color: white;
-  width: 50%;
+  width: 260px;
   text-shadow: 1px 1px darkgray;
-  padding: 0 5% 0 0;
 }
 
-.inactive-example {
+.example-2 {
   background-color: transparent;
   border: none;
+  /* border-bottom: 3px solid white; */
   font-size: 30px;
-  opacity: 60%;
-  width: 30%;
+  color: white;
+  width: 260px;
+  text-shadow: 1px 1px darkgray;
 }
 
-.inactive-example:hover {
-  opacity: 80%;
-  transform: scale(1.05);
-  transition: 200ms linear;
+.example-3 {
+  background-color: transparent;
+  border: none;
   /* border-bottom: 3px solid white; */
+  font-size: 30px;
+  color: white;
+  width: 260px;
+  text-shadow: 1px 1px darkgray;
+}
+
+.option-icon {
+  width: 150px;
+  height: 150px;
+  margin: 0 55px 25px;
 }
 
 .example-arrow-container {
@@ -906,11 +924,12 @@ nav {
 
 .example-text-box {
   display: flex;
-  margin: 40px 0;
+  margin: 20px 5% 0 0;
 }
 
 .example-title {
   font-size: 30px;
+  text-align: center;
 }
 
 .example-text {
@@ -923,36 +942,6 @@ nav {
 .example-checkmark {
   height: 30px;
   width: 30px;
-}
-
-.example-1 {
-  margin: 25px 60% 0 20%;
-  padding: 1% 1% 1% 2%;
-  height: 175px;
-  width: 20%;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: -1px 1px 5px grey;
-}
-
-.example-2 {
-  margin: 25px 41% 0 39%;
-  padding: 1% 1% 1% 2%;
-  height: 175px;
-  width: 20%;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: -1px 1px 5px grey;
-}
-
-.example-3 {
-  margin: 25px 20% 0 60%;
-  padding: 1% 1% 1% 2%;
-  height: 175px;
-  width: 20%;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: -1px 1px 5px grey;
 }
 
 .option-subtitle {
@@ -970,6 +959,7 @@ nav {
   width: 70%;
   margin: 50px auto;
   padding: 0 5%;
+  font-size: 25px;
 }
 
 .option-testimonial-section-1 {
@@ -1004,6 +994,12 @@ nav {
   color: white;
   font-size: 30px;
   padding: 0;
+}
+
+.video-3-btn:hover {
+  transform: scale(1.2);
+  opacity: 70%;
+  transition: 200ms linear;
 }
 
 .video-3 {
@@ -1139,17 +1135,23 @@ nav {
 }
 
 .social-divider-container {
-  width: 50%;
-  margin: 15px 25%;
+  width: 70%;
+  margin: 15px 15%;
   display: flex;
 }
 
-.social-profile-pic {
+.social-divider-logo {
+  height: 40px;
+  width: auto;
+  margin: 10px 0 0;
+}
+
+/* .social-profile-pic {
   background-color: hotpink;
   height: 100px;
   width: 100px;
   border-radius: 50%;
-}
+} */
 
 .social-divider-text-container {
   width: 80%;
@@ -1161,20 +1163,18 @@ nav {
 }
 
 .social-divider-names {
-  display: flex;
+  /* display: flex; */
 }
 
 .social-divider-person {
-  padding: 2% 0;
   font-size: 25px;
   font-weight: 500;
-  color: rgb(238, 0, 119);
+  margin: 0;
 }
 
-.social-divider-logo {
-  height: 100%;
-  width: auto;
-  margin: 0 0 0 5%;
+.social-divider-position {
+  font-size: 20px;
+  font-style: italic;
 }
 
 .social-divider-bottom {
@@ -1559,8 +1559,6 @@ nav {
   /* HEADER STYLES */
   .contact-bar-container {
     display: flex;
-    justify-content: space-evenly;
-    margin: 0 auto;
     padding: 5px 0;
   }
 
@@ -1918,7 +1916,7 @@ nav {
 
   /* OPTION SECTION MOBILE*/
   .option-section {
-    height: 1800px;
+    height: 2400px;
     padding: 100px 0 0;
     bottom: 300px;
     margin-bottom: -325px;
@@ -1937,7 +1935,7 @@ nav {
   .example-btn-container {
     padding: 0;
     display: block;
-    height: 500px;
+    height: 1200px;
     margin: 50px auto 0;
   }
 
@@ -1946,16 +1944,36 @@ nav {
     font-size: 15px;
   }
 
-  .active-example {
+  .example-1 {
     width: 100%;
     font-size: 15px;
-    padding: 0;
-    margin: 50px auto;
+    padding: 0 10%;
+    margin: 100px auto;
   }
 
-  .inactive-example {
-    width: 150px;
+  .example-2 {
+    width: 100%;
     font-size: 15px;
+    padding: 0 10%;
+    margin: 100px auto;
+  }
+
+  .example-3 {
+    width: 100%;
+    font-size: 15px;
+    padding: 0 10%;
+    margin: 100px auto;
+  }
+
+  .option-icon-container {
+    height: 150px;
+    width: 100%;
+  }
+
+  .option-icon {
+    height: auto;
+    width: 24%;
+    margin: 0 38%;
   }
 
   .example-title {
@@ -2073,6 +2091,10 @@ nav {
     margin: 15px 15%;
   }
 
+  .social-divider-logo {
+    margin: 0;
+  }
+
   .social-divider-text {
     font-size: 15px;
   }
@@ -2082,7 +2104,6 @@ nav {
   }
 
   .social-divider-person {
-    padding: 2% 0;
     font-size: 20px;
   }
 
@@ -2163,9 +2184,9 @@ nav {
     height: 100px;
   }
 
-  .option-section {
+  /* .option-section {
     height: 1600px;
-  }
+  } */
 
   .option-section-topper {
     height: 450px;
@@ -2250,14 +2271,30 @@ nav {
     height: 325px;
   }
 
+  .option-section {
+    height: 2300px;
+  }
+
   .example-btn-container {
-    height: 500px;
+    /* height: 500px; */
     width: 80%;
     margin: 100px 10% 0;
   }
 
   .example-text-box {
     padding: 0 10% 0 15%;
+  }
+
+  .example-1 {
+    padding: 0;
+  }
+
+  .example-2 {
+    padding: 0;
+  }
+
+  .example-3 {
+    padding: 0;
   }
 
   .video-1-btn {
@@ -2400,8 +2437,16 @@ nav {
     height: 0px;
   }
 
+  .option-section {
+    height: 2100px;
+  }
+
   .option-title {
     padding: 0;
+  }
+
+  .option-testimonial-container {
+    font-size: 20px;
   }
 
   .example-btn {
@@ -2432,8 +2477,8 @@ nav {
   }
 
   .social-divider-container {
-    width: 90%;
-    margin: 15px 5%;
+    width: 80%;
+    margin: 15px 10%;
   }
 
   .pricing-section {
@@ -2489,6 +2534,8 @@ nav {
   }
 
   .contact-bar-container {
+    justify-content: space-evenly;
+    margin: 0 auto;
     padding: 5px 0;
     font-size: 12px;
   }
@@ -2662,6 +2709,12 @@ nav {
   .option-section {
     padding: 50px 0 0;
     bottom: 400px;
+    height: 1900px;
+  }
+
+  .option-icon {
+    width: 32%;
+    margin: 0 34%;
   }
 
   .option-title {
@@ -2677,10 +2730,6 @@ nav {
   .option-section-topper {
     height: 150px;
     bottom: 350px;
-  }
-
-  .example-btn-container {
-    height: 600px;
   }
 
   .video-3-btn {
@@ -2724,7 +2773,8 @@ nav {
   }
 
   .social-divider-logo {
-    height: 80%;
+    height: 30px;
+    margin: 25px 0;
   }
 }
 
@@ -2781,6 +2831,10 @@ nav {
     margin: 16% 25%;
     height: 80px;
     width: 80px;
+  }
+
+  .social-divider-section {
+    height: 300px;
   }
 
   .cta-section {

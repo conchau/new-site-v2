@@ -42,6 +42,7 @@ import leftArrow2 from "../images/left-arrow.png";
 import rightArrow from "../images/rightArrow.png";
 import rightArrow2 from "../images/right-arrow.png";
 import screenshot from "../images/simscreenshot.png";
+import screenshot2 from "../images/studentscreenshot.png";
 import data from "../images/data.png";
 import girlOnLaptop from "../images/girl-on-laptop.png";
 import playButton from "../images/play-btn.png";
@@ -59,6 +60,16 @@ import Kristine from "../images/characters/Kristine.png";
 import Mark from "../images/characters/Mark.png";
 import Susan from "../images/characters/Susan.png";
 import William from "../images/characters/William.png";
+import feedback from "../images/simulations/feedback.png";
+import interviews from "../images/simulations/interviews.png";
+import introductions from "../images/simulations/introductions.png";
+import objections from "../images/simulations/objections.png";
+import pitches from "../images/simulations/pitches.png";
+import presentations from "../images/simulations/presentations.png";
+import recruiting from "../images/recruiting.png";
+import retaining from "../images/retaining.png";
+import transitioning from "../images/transitioning.png";
+
 
 const axios = require("axios").default;
 
@@ -85,26 +96,6 @@ function Home() {
             });
     }
 
-    function switchExample(option){
-        setExampleCard(option);
-
-        if (option === "example-1"){
-            setExplainerTitle("To help students stand out to employers...")
-            example1.current.className = "active-example";
-            example2.current.className = "inactive-example";
-            example3.current.className = "inactive-example";
-        } else if (option === "example-2"){
-            setExplainerTitle("To help students advance in their careers...")
-            example1.current.className = "inactive-example";
-            example2.current.className = "active-example";
-            example3.current.className = "inactive-example";
-        } else if (option === "example-3"){
-            setExplainerTitle("To help international students integrate into the workforce...")
-            example1.current.className = "inactive-example";
-            example2.current.className = "inactive-example";
-            example3.current.className = "active-example";
-        }
-    }
 
     return (
         <div className="home-page">
@@ -160,7 +151,7 @@ function Home() {
                     <ModalVideo className="video-2" channel='vimeo' autoplay controls="false" isOpen={isOpen2} allowFullScreen videoId="508210873" onClose={() => setOpen2(false)} />
                 </div>
                 <div className="demo-section-2">
-                    <h1 className="demo-title">Watch the demo</h1>
+                    <h1 className="demo-title">Watch the most recent Live Demo</h1>
                     <h2 className="demo-text">Co-founder, Imran Mouna shows you the InStage experience</h2>
                 </div>
             </div>
@@ -179,7 +170,7 @@ function Home() {
                     <SimCard
                         title="Self-Introductions"
                         description="Learn the 4 steps of a self-introduction and practice introducing yourself to an employer!"
-                        cover={screenshot}
+                        cover={introductions}
                         character1Img={David}
                         character1Name="David"
                         character1Temperment="Expressionless"
@@ -200,7 +191,7 @@ function Home() {
                     <SimCard
                         title="Panel Interviews"
                         description="Complete a Panel Interview. Learn and practice using the STAR model."
-                        cover={screenshot}
+                        cover={interviews}
                         character1Img={Jennifer}
                         character1Name="Jennifer"
                         character1Temperment="Angry"
@@ -222,7 +213,7 @@ function Home() {
                     <SimCard
                         title="Handling Objections"
                         description="Learn and practice a 4 step model to handling objections."
-                        cover={screenshot}
+                        cover={objections}
                         character1Img={Ava}
                         character1Name="Ava"
                         character1Temperment="Happy"
@@ -242,8 +233,8 @@ function Home() {
                     />
                     <SimCard
                         title="Giving Feedback"
-                        description="You’re about to go into a meeting with the Customer Support Team and deliver your feedback, opening up a wide range of discussions on how to improve and what to keep doing."
-                        cover={screenshot}
+                        description="Go into a meeting and deliver your feedback to the team on how to improve and what to keep doing."
+                        cover={feedback}
                         character1Img={Jess}
                         character1Name="Jess"
                         character1Temperment="Expressionless"
@@ -263,8 +254,8 @@ function Home() {
                     />
                     <SimCard
                         title="Product Presentations"
-                        description="Your coworkers have agreed to help you run through a practice presentation before presenting the actual product to clients, and convincing them it is the right fit for them."
-                        cover={screenshot}
+                        description="Run through a practice presentation before presenting a new product idea to clients."
+                        cover={presentations}
                         character1Img={Ava}
                         character1Name="Ava"
                         character1Temperment="Happy"
@@ -284,8 +275,8 @@ function Home() {
                     />
                     <SimCard
                         title="Startup Pitches"
-                        description="You’re about to head into the boardroom and present to a few higher-ups regarding your ideas for company expansion."
-                        cover={screenshot}
+                        description="Head into the boardroom and present to a few higher-ups regarding your ideas for company expansion."
+                        cover={pitches}
                         character1Img={Ava}
                         character1Name="Ava"
                         character1Temperment="Happy"
@@ -406,87 +397,68 @@ function Home() {
             <div className="option-section">
                 <h1 className="option-title">International Students benefit most by using InStage.</h1>
                 <div className="example-btn-container">
-                    <div className="active-example" data-aos="zoom-in" ref={example1} onMouseEnter={console.log("Focus!")}>
-                    {/* onClick={() => switchExample("example-1")} */}
-                        <h2 className="example-title">Recruiting</h2>
-                        <div className="example-text-box">
-                            <img src={check} className="example-checkmark" alt="checkmark" />
-                            <p className="example-text">Use InStage to efficiently conduct screening interviews.</p>
+                    <div className="example-1" data-aos="zoom-in" ref={example1}>
+                        <div className="option-icon-container">
+                            <img src={recruiting} className="option-icon" alt="find-my-friend-icon" />
                         </div>
-                        <div className="example-text-box">
-                            <img src={check} className="example-checkmark" alt="checkmark" />
-                            <p className="example-text">Showcase immersive learning capacity to candidates.</p>
-                        </div>
-                    </div>
-                    {/* <div className="example-arrow-container">
-                        {exampleCard === "example-1" && (
-                        <img src={rightArrow2} className="example-arrow" data-aos="zoom-in-right" alt="right-arrow" />
-                        )}
-                    </div> */}
-                    <div className="active-example" data-aos="zoom-in" data-aos-delay="600" ref={example2}>
-                        <h2 className="example-title">Retaining</h2>
-                        <div className="example-text-box">
-                            <img src={check} className="example-checkmark" alt="checkmark" />
-                            <p className="example-text">Increase online learning engagement.</p>
-                        </div>
-                        <div className="example-text-box">
-                            <img src={check} className="example-checkmark" alt="checkmark" />
-                            <p className="example-text">InStage users report 94% more confidence.</p>
+                        <div>
+                            <h2 className="example-title">Recruiting</h2>
+                            <div className="example-text-box">
+                                <img src={check} className="example-checkmark" alt="checkmark" />
+                                <p className="example-text">Use InStage to efficiently conduct screening interviews.</p>
+                            </div>
+                            <div className="example-text-box">
+                                <img src={check} className="example-checkmark" alt="checkmark" />
+                                <p className="example-text">Showcase immersive learning capacity to candidates.</p>
+                            </div>
                         </div>
                     </div>
-                    {/* <div className="example-arrow-container">
-                        {exampleCard === "example-2" && (
-                        <img src={rightArrow2} className="example-arrow" data-aos="zoom-in-right" alt="right-arrow" />
-                        )}
-                        {exampleCard === "example-3" && (
-                        <img src={leftArrow2} className="example-arrow" data-aos="zoom-in-left" alt="left-arrow" />
-                        )}
-                    </div> */}
-                    <div className="active-example" data-aos="zoom-in" data-aos-delay="1200" ref={example3}>
-                        <h2 className="example-title">Transitioning</h2>
-                        <div className="example-text-box">
-                            <img src={check} className="example-checkmark" alt="checkmark" />
-                            <p className="example-text">Employers say that they want students with better soft-skills.</p>
+
+                    <div className="example-2" data-aos="zoom-in" data-aos-delay="600" ref={example2}>
+                        <div className="option-icon-container">
+                            <img src={retaining} className="option-icon" alt="find-my-friend-icon" />
                         </div>
-                        <div className="example-text-box">
-                            <img src={check} className="example-checkmark" alt="checkmark" />
-                            <p className="example-text">Learn interviewing norms and increase.</p>
+                        <div>
+                            <h2 className="example-title">Retaining</h2>
+                            <div className="example-text-box">
+                                <img src={check} className="example-checkmark" alt="checkmark" />
+                                <p className="example-text">Increase online learning engagement.</p>
+                            </div>
+                            <div className="example-text-box">
+                                <img src={check} className="example-checkmark" alt="checkmark" />
+                                <p className="example-text">InStage users report 94% more confidence.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="example-3" data-aos="zoom-in" data-aos-delay="1200" ref={example3}>
+                        <div className="option-icon-container">
+                            <img src={transitioning} className="option-icon" alt="find-my-friend-icon" />
+                        </div>
+                        <div>
+                            <h2 className="example-title">Transitioning</h2>
+                            <div className="example-text-box">
+                                <img src={check} className="example-checkmark" alt="checkmark" />
+                                <p className="example-text">Employers say that they want students with better soft-skills.</p>
+                            </div>
+                            <div className="example-text-box">
+                                <img src={check} className="example-checkmark" alt="checkmark" />
+                                <p className="example-text">Learn interviewing norms and increase.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="example-container">
-                        {/* <div className="example-card">
-                            {exampleCard === "example-1" && (
-                                <div className="example-1" data-aos="fade-right">
-                                    <p className="example-text">Use InStage to efficiently conduct screening interviews.</p>
-                                    <p className="example-text">Showcase immersive learning capacity to candidates.</p>
-                                </div>
-                            )}
-                            {exampleCard === "example-2" &&(
-                                <div className="example-2" data-aos="fade-right">
-                                    <p className="example-text">Increase online learning engagement.</p>
-                                    <p className="example-text">InStage users report 94% more confidence.</p>
-                                </div>
-                            )}
-                            {exampleCard === "example-3" &&(
-                                <div className="example-3" data-aos="fade-right">
-                                    <p className="example-text">Employers say that they want students with better soft-skills.</p>
-                                    <p className="example-text">Learn interviewing norms and increase.</p>
-                                </div>
-                            )}
-                        </div> */}
-                </div>
-                <h1 className="option-subtitle">Student Testimonials</h1>
+                <h1 className="option-subtitle"></h1>
                 <div className="option-testimonial-container">
                     <div className="option-testimonial-section-1">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl purus in mollis nunc sed id. Ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Maecenas pharetra convallis posuere morbi."</p>
-                        <p>- Jose Student</p>
+                        <p>"I think it's a good way to improve my English skills and improve my speech skills."</p>
+                        <p>- International Student</p>
                     </div>
                     <div className="option-testimonial-section-2">
                         {/* <ReactPlayer className="video-3" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" /> */}
                         <button className="video-3-btn" onClick={()=> setOpen3(true)}>▶︎</button>
-                        <img src={screenshot} className="video-3-img" />
-                        <ModalVideo className="video-3" channel='vimeo' autoplay controls="false" isOpen={isOpen3} allowFullScreen videoId="508210873" onClose={() => setOpen3(false)} />
+                        <img src={screenshot2} className="video-3-img" />
+                        <ModalVideo className="video-3" channel='vimeo' autoplay controls="false" isOpen={isOpen3} allowFullScreen videoId="515487808" onClose={() => setOpen3(false)} />
                     </div>
                 </div>
             </div>
@@ -500,7 +472,7 @@ function Home() {
                     <div className="pricing-card bounce">
                         <p className="pricing-card-text">InStage is sold by the session.</p>
                         <p className="pricing-card-text">Students receive a link that allows them to book a practice session.</p>
-                        <p className="pricing-card-text">Click below to see pricing details.</p>
+                        <p className="pricing-card-text">Click below to learn more.</p>
                         <a href="/demo" style={{textDecoration: "none"}}><button className="pricing-card-btn">Talk to Us</button></a>
                     </div>
                     {/* <div className="pricing-single bounce">
@@ -526,14 +498,14 @@ function Home() {
             {/* SOCIAL DIVIDER SECTION */}
             <div className="social-divider-section">
                 <div className="social-divider-container">
-                    <div className="social-profile-pic"></div>
+                    <img src={Seneca} className="social-divider-logo" alt="seneca-logo" />
                     <div className="social-divider-text-container">
                         <p className="social-divider-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar mattis nunc sed blandit libero volutpat.
+                        "I have seen students' confidence grow and their skills develop, which has lead them to be better positioned to effectively communicate in a job interview or present ideas."
                         </p>
                         <div className="social-divider-names">
-                            <p className="social-divider-person">Dave School Director</p>
-                            <img src={Fanshawe} className="social-divider-logo" alt="fanshawe-logo" />
+                            <p className="social-divider-person">Chris Dudley</p>
+                            <p className="social-divider-position">Director</p>
                         </div>
                     </div>
                 </div>
