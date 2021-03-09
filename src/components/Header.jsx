@@ -54,11 +54,12 @@ function Header (){
                         activeKey={activeLink}
                         onSelect={(selectedKey) => setActiveLink(selectedKey)}
                     >
+                    {/* REMOVED THE "HREF" AND "TO" PROPERTIES FOR MULTIPLE PAGES */}
                     <Nav.Link as={Link} to="/" href="/" eventKey="/">Higher Ed</Nav.Link>
-                    <Nav.Link as={Link} to="/highschool" href="/highschool" eventKey="/highschool" className="two">High School</Nav.Link>
-                    <Nav.Link as={Link} to="/corporate" href="/corporate" eventKey="/corporate" className="three">Corporate</Nav.Link>
-                    <Nav.Link as={Link} to="/resources" href="/resources" eventKey="resources" className="four">Resources</Nav.Link>
-                    <Nav.Link as={Link} to="/pricing" href="/pricing" eventKey="/pricing">Pricing</Nav.Link>
+                    <Nav.Link as={Link} to="/" eventKey="/highschool" className="two">High School</Nav.Link>
+                    <Nav.Link as={Link} to="/" eventKey="/corporate" className="three">Corporate</Nav.Link>
+                    <Nav.Link as={Link} to="/" eventKey="resources" className="four">Resources</Nav.Link>
+                    <Nav.Link as={Link} to="/demo" href="/demo" eventKey="/demo">Pricing</Nav.Link>
                     <Nav.Link as={Link} to="/demo" href="/demo" eventKey="/demo" className="cta-btn-header">Schedule Private Demo</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

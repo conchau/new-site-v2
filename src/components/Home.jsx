@@ -44,6 +44,21 @@ import rightArrow2 from "../images/right-arrow.png";
 import screenshot from "../images/simscreenshot.png";
 import data from "../images/data.png";
 import girlOnLaptop from "../images/girl-on-laptop.png";
+import playButton from "../images/play-btn.png";
+import Anita from "../images/characters/Anita.png";
+import Antonio from "../images/characters/Antonio.png";
+import Ava from "../images/characters/Ava.png";
+import Chandi from "../images/characters/Chandi.png";
+import David from "../images/characters/David.png";
+import Dennis from "../images/characters/Dennis.png";
+import George from "../images/characters/George.png";
+import Jason from "../images/characters/Jason.png";
+import Jennifer from "../images/characters/Jennifer.png";
+import Jess from "../images/characters/Jess.png";
+import Kristine from "../images/characters/Kristine.png";
+import Mark from "../images/characters/Mark.png";
+import Susan from "../images/characters/Susan.png";
+import William from "../images/characters/William.png";
 
 const axios = require("axios").default;
 
@@ -54,7 +69,7 @@ function Home() {
     const [exampleCard, setExampleCard] = useState("example-1");
 
     // React Modal Video Component implementation
-    const [isOpen, setOpen] = useState(false)
+    const [isOpen1, setOpen1] = useState(false)
 
     //References to example type buttons for updating the CSS on toggle
     const example1 = useRef(null);
@@ -105,8 +120,10 @@ function Home() {
                 <div className="hero-section-2">
                     <div className="hero-section-2-fixed">
                             {/* <ReactPlayer className="video-1" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" /> */}
-                            <ModalVideo className="video-1" channel='vimeo' autoplay controls="false" isOpen={isOpen} allowFullScreen videoId="508210873" onClose={() => setOpen(false)} />
-                            <button className="video-1-btn" onClick={()=> setOpen(true)}>VIEW DEMO</button>
+                            {/* <button className="video-1-btn2" onClick={()=> setOpen(true)}>VIEW DEMO</button> */}
+                            <button className="video-1-btn" onClick={()=> setOpen1(true)}>▶︎</button>
+                            <img src={screenshot} className="video-1-img" />
+                            <ModalVideo className="video-1" channel='vimeo' autoplay controls="false" isOpen={isOpen1} allowFullScreen videoId="508210873" onClose={() => setOpen1(false)} />
                     </div>
                     <div className="social-proof-1">
                         <div className="logo-container">
@@ -135,7 +152,10 @@ function Home() {
             {/* DEMO SECTION */}
             <div className="demo-section">
                 <div className="demo-section-1">
-                    <ReactPlayer className="video-2" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" />
+                    {/* <ReactPlayer className="video-2" url="https://vimeo.com/508210873/750aa8a2cd" controls="true" /> */}
+                    <button className="video-2-btn" onClick={()=> setOpen1(true)}>▶︎</button>
+                            <img src={screenshot} className="video-2-img" />
+                            <ModalVideo className="video-2" channel='vimeo' autoplay controls="false" isOpen={isOpen1} allowFullScreen videoId="508210873" onClose={() => setOpen1(false)} />
                 </div>
                 <div className="demo-section-2">
                     <h1 className="demo-title">Watch the demo</h1>
@@ -155,19 +175,131 @@ function Home() {
                     className="carousel"
                 >
                     <SimCard
-                        title="Self-Introduction"
+                        title="Self-Introductions"
                         description="Learn the 4 steps of a self-introduction and practice introducing yourself to an employer!"
-                        time="5:00"
+                        cover={screenshot}
+                        character1Img={David}
+                        character1Name="David"
+                        character1Temperment="Expressionless"
+                        character1Attentiveness="High"
+                        character2Img={Susan}
+                        character2Name="Susan"
+                        character2Temperment="Happy"
+                        character2Attentiveness="Very High"
+                        character3Img={Mark}
+                        character3Name="Mark"
+                        character3Temperment="Angry"
+                        character3Attentiveness="Low"
+                        character4Img={William}
+                        character4Name="William"
+                        character4Temperment="Happy"
+                        character4Attentiveness="High"
                     />
                     <SimCard
-                        title="Interview Practice"
+                        title="Panel Interviews"
                         description="Complete a Panel Interview. Learn and practice using the STAR model."
-                        time="25:00"
+                        cover={screenshot}
+                        character1Img={Jennifer}
+                        character1Name="Jennifer"
+                        character1Temperment="Angry"
+                        character1Attentiveness="Very Low"
+                        character2Img={William}
+                        character2Name="William"
+                        character2Temperment="Happy"
+                        character2Attentiveness="High"
+                        character3Img={David}
+                        character3Name="David"
+                        character3Temperment="Expressionless"
+                        character3Attentiveness="High"
+                        character4Img={Anita}
+                        character4Name="Anita"
+                        character4Temperment="Happy"
+                        character4Attentiveness="Very High"
+
                     />
                     <SimCard
                         title="Handling Objections"
                         description="Learn and practice a 4 step model to handling objections."
-                        time="15:00"
+                        cover={screenshot}
+                        character1Img={Ava}
+                        character1Name="Ava"
+                        character1Temperment="Happy"
+                        character1Attentiveness="Very High"
+                        character2Img={Antonio}
+                        character2Name="Antonio"
+                        character2Temperment="Happy"
+                        character2Attentiveness="High"
+                        character3Img={Kristine}
+                        character3Name="Kristine"
+                        character3Temperment="Angry"
+                        character3Attentiveness="Low"
+                        character4Img={George}
+                        character4Name="George"
+                        character4Temperment="Expressionless"
+                        character4Attentiveness="Low"
+                    />
+                    <SimCard
+                        title="Giving Feedback"
+                        description="You’re about to go into a meeting with the Customer Support Team and deliver your feedback, opening up a wide range of discussions on how to improve and what to keep doing."
+                        cover={screenshot}
+                        character1Img={Jess}
+                        character1Name="Jess"
+                        character1Temperment="Expressionless"
+                        character1Attentiveness="Low"
+                        character2Img={Jason}
+                        character2Name="Jason"
+                        character2Temperment="Expressionless"
+                        character2Attentiveness="Very Low"
+                        character3Img={Chandi}
+                        character3Name="Chandi"
+                        character3Temperment="Happy"
+                        character3Attentiveness="Very High"
+                        character4Img={Dennis}
+                        character4Name="Dennis"
+                        character4Temperment="Happy"
+                        character4Attentiveness="Very High"
+                    />
+                    <SimCard
+                        title="Product Presentations"
+                        description="Your coworkers have agreed to help you run through a practice presentation before presenting the actual product to clients, and convincing them it is the right fit for them."
+                        cover={screenshot}
+                        character1Img={Ava}
+                        character1Name="Ava"
+                        character1Temperment="Happy"
+                        character1Attentiveness="Very High"
+                        character2Img={Mark}
+                        character2Name="Mark"
+                        character2Temperment="Angry"
+                        character2Attentiveness="Low"
+                        character3Img={Chandi}
+                        character3Name="Chandi"
+                        character3Temperment="Happy"
+                        character3Attentiveness="Very High"
+                        character4Img={David}
+                        character4Name="David"
+                        character4Temperment="Expressionless"
+                        character4Attentiveness="High"
+                    />
+                    <SimCard
+                        title="Startup Pitches"
+                        description="You’re about to head into the boardroom and present to a few higher-ups regarding your ideas for company expansion."
+                        cover={screenshot}
+                        character1Img={Ava}
+                        character1Name="Ava"
+                        character1Temperment="Happy"
+                        character1Attentiveness="Very High"
+                        character2Img={Mark}
+                        character2Name="Mark"
+                        character2Temperment="Angry"
+                        character2Attentiveness="Low"
+                        character3Img={Susan}
+                        character3Name="Susan"
+                        character3Temperment="Happy"
+                        character3Attentiveness="Very High"
+                        character4Img={William}
+                        character4Name="William"
+                        character4Temperment="Happy"
+                        character4Attentiveness="High"
                     />
                 </Carousel>
             </div>
@@ -359,18 +491,18 @@ function Home() {
             {/* PRICING SECTION */}
             <div className="pricing-section">
                 <h1 className="pricing-title">Remotely engage your students with InStage Practice Sessions</h1>
-                <h2 className="pricing-subtitle">InStage is only available through educational institutions and businesses.</h2>
                 <div className="pricing-breakdown">
-                    <div className="pricing-unlimited bounce">
-                        <h2 className="pricing-card-title">Unlimited Practice Sessions</h2>
-                        <p className="pricing-card-text">Students can book an unlimited number of practice sessions during the semester.</p>
-                        <a href="/pricing" style={{textDecoration: "none"}}><button className="pricing-card-btn">Learn More</button></a>
+                    <div className="pricing-card bounce">
+                        <p className="pricing-card-text">InStage is sold by the session.</p>
+                        <p className="pricing-card-text">Students receive a link that allows them to book a practice session.</p>
+                        <p className="pricing-card-text">Click below to see pricing details.</p>
+                        <a href="/demo" style={{textDecoration: "none"}}><button className="pricing-card-btn">Talk to Us</button></a>
                     </div>
-                    <div className="pricing-single bounce">
+                    {/* <div className="pricing-single bounce">
                         <h2 className="pricing-card-title">Single Practice Sessions</h2>
                         <p className="pricing-card-text">Students receive a session link that allows them to book a single practice session.</p>
                         <a href="/pricing" style={{textDecoration: "none"}}><button className="pricing-card-btn">Learn More</button></a>
-                    </div>
+                    </div> */}
                     <div className="pricing-detail-section">
                         <div className="pricing-section-text-box">
                             <img src={checkGreen} className="right-arrow-pricing"/><p className="pricing-detail-text">No downloads or accounts are required to get started</p>
@@ -383,6 +515,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
+                <h2 className="pricing-subtitle">InStage is only available through educational institutions and businesses.</h2>
             </div>
 
             {/* SOCIAL DIVIDER SECTION */}

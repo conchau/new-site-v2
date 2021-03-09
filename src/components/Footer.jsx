@@ -20,6 +20,7 @@ function Footer() {
                 </a>
             </div>
             <p className="copyright-text">© Copyright 2021 InStage. All rights reserved.</p>
+            <a href="https://www.instage.io/privacypolicy/"><p className="privacy-text">Privacy Policy.</p></a>
         </div>
     )
 }
