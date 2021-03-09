@@ -344,7 +344,8 @@ nav {
   background-color: #00a9af;
   border: none;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
+  padding: 0;
 }
 
 .video-1-btn:hover {
@@ -471,7 +472,8 @@ nav {
   background-color: #00a9af;
   border: none;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
+  padding: 0;
 }
 
 .video-2-btn:hover {
@@ -1000,7 +1002,8 @@ nav {
   background-color: #00a9af;
   border: none;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
+  padding: 0;
 }
 
 .video-3 {
@@ -1680,7 +1683,6 @@ nav {
     margin: 15% 28%;
     height: 150px;
     width: 150px;
-    font-size: 40px;
   }
 
   /* DIVIDER SECTION MOBILE */
@@ -1735,7 +1737,6 @@ nav {
     margin: 15% 28%;
     height: 150px;
     width: 150px;
-    font-size: 40px;
   }
 
   .demo-title {
@@ -1998,7 +1999,6 @@ nav {
     margin: 15% 28%;
     height: 150px;
     width: 150px;
-    font-size: 40px;
   }
 
   /* PRICING SECTION MOBILE */
@@ -2425,6 +2425,12 @@ nav {
     width: 80% !important;
   }
 
+  .video-3-btn {
+    margin: 14% 28%;
+    height: 100px;
+    width: 100px;
+  }
+
   .social-divider-container {
     width: 90%;
     margin: 15px 5%;
@@ -2677,6 +2683,12 @@ nav {
     height: 600px;
   }
 
+  .video-3-btn {
+    margin: 14% 25%;
+    height: 100px;
+    width: 100px;
+  }
+
   .divider-curve-3 {
     height: 200px;
     bottom: 350px;
@@ -2763,6 +2775,12 @@ nav {
 
   .feature-title {
     padding: 0 10%;
+  }
+
+  .video-3-btn {
+    margin: 16% 25%;
+    height: 80px;
+    width: 80px;
   }
 
   .cta-section {
