@@ -25,6 +25,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #414042 !important;
+  overflow-x: hidden;
 }
 
 /* ANIMATIONS */
@@ -162,7 +163,6 @@ nav {
   font-size: 14px;
   text-align-last: center;
   display: flex;
-  opacity: 80%;
 }
 
 .nav-link:hover {
@@ -210,11 +210,11 @@ nav {
   background-color: #414042;
   min-height: 100px;
   width: 100%;
-  padding: 10px 15%;
+  padding: 25px 15% 40px;
 }
 
 .footer-content {
-  margin: 40px auto;
+  margin: 25px auto;
   padding: 0 10%;
   height: 35px;
   width: 50%;
@@ -252,19 +252,17 @@ nav {
   display: flex;
   height: 700px;
   /* Note: for actual height, subtract header height (aka padding of this section) */
-  padding: 150px 0 0;
+  padding: 150px 15% 0;
 }
 
 .hero-section-1 {
   width: 55%;
   height: 600px;
-  margin: 0 0 0 15%;
 }
 
 .hero-section-2 {
   width: 45%;
   height: 600px;
-  margin: 0 15% 0 0;
 }
 
 .hero-section-1-fixed {
@@ -617,7 +615,7 @@ nav {
 /* FEATURE SECTION */
 .feature-section {
   margin: 50px auto 0;
-  height: 3100px;
+  height: 2900px;
 }
 
 .feature-title {
@@ -637,7 +635,7 @@ nav {
   height: 500px;
   display: flex;
   padding: 2% 15%;
-  margin: 50px auto 100px;
+  margin: 50px auto;
 }
 
 .feature-section-1a {
@@ -654,7 +652,7 @@ nav {
   height: 500px;
   display: flex;
   padding: 0 15%;
-  margin: 50px auto 100px;
+  margin: 50px auto;
 }
 
 .feature-section-2a {
@@ -671,7 +669,7 @@ nav {
   height: 500px;
   display: flex;
   padding: 2% 15%;
-  margin: 50px auto 100px;
+  margin: 50px auto;
 }
 
 .feature-section-3a {
@@ -687,8 +685,8 @@ nav {
 .feature-section-4 {
   height: 500px;
   display: flex;
-  padding: 0 15%;
-  margin: 50px auto 100px;
+  padding: 2% 15%;
+  margin: 50px auto;
 }
 
 .feature-section-4a {
@@ -705,7 +703,7 @@ nav {
   height: 500px;
   display: flex;
   padding: 2% 15%;
-  margin: 50px auto 100px;
+  margin: 50px auto;
 }
 
 .feature-section-5a {
@@ -2447,6 +2445,7 @@ nav {
 
   .option-testimonial-container {
     font-size: 20px;
+    text-align: center;
   }
 
   .example-btn {

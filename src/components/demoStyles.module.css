@@ -176,6 +176,19 @@
     height: 150px;
   }
 
+  .logoContainer {
+    margin: 20px auto;
+  }
+
+  .logo {
+    width: 15%;
+    margin: 10px;
+  }
+  .humberLogo {
+    width: 20%;
+    margin: 10px;
+  }
+
   .socialDividerContainer {
     text-align: center;
     padding: 0 5%;
@@ -196,17 +209,54 @@
   .demoPage {
     background-image: none;
   }
+
+  .logo {
+    width: 21%;
+    margin: 10px;
+  }
+  .humberLogo {
+    width: 26%;
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 800px) {
   .demoPage {
     height: 2700px;
   }
+
+  .logo {
+    width: 24%;
+    margin: 10px;
+  }
+
+  .humberLogo {
+    width: 29%;
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .featureContainerText {
     font-size: 20px;
+  }
+
+  .socialProofContainer {
+    height: 215px;
+  }
+
+  .logoContainer {
+    display: block;
+  }
+
+  .logo {
+    width: 34%;
+    margin: 10px 33%;
+  }
+
+  .humberLogo {
+    width: 36%;
+    margin: 10px 32%;
   }
 }
 
