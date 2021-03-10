@@ -2358,6 +2358,10 @@ nav {
     width: 100px;
   }
 
+  .BrainhubCarousel__container {
+    padding: 0 5% !important;
+  }
+
   .feature-section {
     height: 4200px;
   }
@@ -2584,6 +2588,10 @@ nav {
     margin: 14% 25%;
     height: 100px;
     width: 100px;
+  }
+
+  .BrainhubCarousel__container {
+    padding: 0 2% !important;
   }
 
   .sim-section button {
